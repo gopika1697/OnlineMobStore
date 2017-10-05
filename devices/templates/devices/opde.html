@@ -1,0 +1,1563 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<img src="{{ oneplus.album_logo}}" height="250" width="200" align="middle">
+<h1>{{oneplus.model_name}} - {{oneplus.model_no}}</h1>
+<ol>
+<li>₹ {{oneplus.price}}</li>
+<li>RAM-{{oneplus.ram}}</li>
+</ol>
+{% if oneplus.model_name == 'Oneplus one' %}
+<div class="refurbish">
+<link rel="stylesheet" href="https://opstatics.com/mage/styles/one.css?v=20170912165625">
+<div class="main-section feature-one">
+
+    <div class="container-infinite">
+
+      <div class="row">
+
+        <a href="https://www.youtube.com/watch?v=2GqExKSwTEA" target="_blank" class="btn btn-primary" track-key="ca18ee96673e88c54dfa416b7e2fd22c" et-attached="1" without-text-key="8d7d0e90174a5968c16b6df698263fc3">Watch the video</a>
+      </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 bg-white">
+          <div class="feature-box" style="height: 835px;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAMAAACYaRRsAAAAVFBMVEUSg6////8Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68DLsBxAAAAG3RSTlMAAAQIEBQYHCAuMEBQYHCAjZCgsL7A0ODw8fNZd/1sAAAHm0lEQVR4AdTW0a6jNhCA4UnrtpaNQTaycfS//3tWJy0rQiAnAc9u9r/jik8wg5HLb5ZcpH3G/GNv/WXMH3IyXbDvU2bVlGPvzQeCu1jYbxp7/0FgE0buu7JR7t1HgB+0TL0VEe99P6RcWTTF7heDbawP3CD3+RAzc9Tofh3YJtbVIJv5ITM39UYFfIBLfEbp0sT/JffTwWaDWzv5Jhdnc/Y/F9xXHipOXqhLG2RtsM1seI28lhmmmawJ9vKjUI9650LmVnZaYD/BanqPeed85lY0zcGzMcstW8551+Qa2oO7ClQnX7nKRtXJgcIEQLZNwfMI/Efyla06OdZwBah9S7CbAAjyVWCzUY5mRwCyaQbuZ9ITbzVyvK4C1K4N2IzcqvY2D2zXy4nmewwtwK7ArWF/32CSk3UVIJvT4K4u37mpbBfkbLYATO4kODA3fHkL21VpUASo3Slwgjm7vFwXpUXhChCOgdfeIiKBvaw0yVWA/jA43X8FbGWnSRplCkA6CE4sciKZvaK0ymSAdAicVlvVs1sn7UoA6QA4sSyLrexmRVH8EnjtZZCR/USai4c3wZH7gme/LAri8BY4sMpnffBa/AbYsa7nSUlaNwLVvQy2lXUTTxqkdaYA1bwKLjxPHyxmAsqL4MibJWmfuwLxJbDn3bIo1AGEF8CmfgZYBqDa78EjbzeJShko34I9BxKVTAWGb8Bm4kBeVPIA7jl44Ei96BSB8hRsK0caRSczAcMzcOJQVZTyQLX7YMvBOlEqAuM+OHGwJEqZCvg9sOVwRpQKQNkDRw43iFYFCDvgyuGq0dy7aRsc4BMfcQbCJnjkRFcrSjlg2gIbTpVFqUsCwgY4cK6gBXbAtAEeOdfVKYEvGegewZWTFaME9kB+AHtONyqBLwWwa3DP+ZISOABxDU40KOmATYW6Bmc+VPylTEC3AtOmpAJ2wKgAVhHfmBNg7sCeVo1GAdwDQQlMMe3BFhi1wFTXHHwpUNXAEJqDI9DpgUmmMdgBURFMsW3BlwplCXY0rnZtwSNgFmChebEpuAe6JbjSvOIagh0Ql+BM+66hHfhSIS/BEY2SaQbOwBLcoVJxrcAD4BZgg07X0AjcAd0CLAWlUhuwA4YluEerYluAL8C4BBvUqq4FeIK8BEtCr9AAnKHegS2KxfPgCNyBJaFYMmfBA/DnHdiiWTEnwT1g7sAyKIvPgf0j2EzK4tPgv+/B4lAWnwXbFVh6dfFxsN0CS/o48eVHm2ApqJaag42yODYG64tDW7C++OragvXFpSF4LqFZPAY2T8DSo5lvcXCs8hW9SpOjeZXJ6NU3+vmRf6s7tx23XSCM/w9TiYIxNS6Y1u//nlWUqlnkEH98HqLt3O5FfouHw5wrCeOAi+g8L49VaaMkqDzgDyLL+CWmTKS2uDx+iTkj9N2aXHgzH6+4VhXPO1K+Gag4T1kS7ar6uv9s74CBm8+wzkCDfB6rrxcz624VLMXaa+tFZh3a/2H/rb5eCBsy2FD3os2qwJ4NykTcmp019WLpAvaPsNe848Rm1VdiDDg+AosWd5PrHsp06Pb+KCsOLktXEscGxyP0INFfZN8BHD6mH0x4UE31eRH6Ejz2Pwke0u8nDxrAK51C80ErSwCQlYzURCcp+X3vRjb5ncC5TgOTfQeQ9c1qGNjUiXZPPD0ROZXj24CXu0Y8gKcn32vSJ6aBy81srVIZnxn02yyDiXvScWOd3do4pqLTJyaAb7vF1sCm+ULxr5c5vwHY1inlZ0tVoj0reRsLXNVFYHlr6cWtb4cDm6osAsyqKkEG3NJ44cn8L1plABzNeaz357bARSpgNHFtdbpKkeDeDeFZLZJDfuIpchwJbOsFvgHjS9zo8GdGRkVTpcFACg2iy3HcA36qi9OoFJoSlLR4BiubpxawFDY/MVPADrNsUrtMeGa/5qzsv6w+nT0CEyuV5Pq2Q0puT0rdLZvttxG8CVKITbS6HxR/8ZxYIIVwx+4H9Pbx15TYIyfEctbBw3I/6fT33G+vahuYWSt7YddtQFX+boG2OSsV0FS/mO39amkDczZE4oGn8z4NK9ZJyRbies26j2HJdwXGelV5QikSoRFAO7AmMG/1BBLYnXoPXEeDuNi9xBt/RrAN4irJvYex5tNyru5BDFhyp1taMcHD1yreBmaJb79t9YyNgLeRJIldfyVTEf1GnThx6PemzDAvDowTx+5TLeOtW3FgnDh11zval3GTyPcflhUEdio7zpX6r0xL6ogBLxoKMT+OdR4YeVekvnuumBdfs+BNv/kIYuo7hd2Ln8lGoXG9yafA8aolJ8sxcEwDn2pokqu8bqvNcByYyjdI4RqvxNr/xQOD59taON46vyzoDxC5LD+mZvpstmNGtGjXZLtUO3B54AG5xFEauPtqRo0Z8kWx3cSUqrgJAQyIBA75MElI5q0etKYPzCMfZ/K4uKO4PDCPnFxrGJl/1zAyn3HcaOs5jBuc2oADA2IjtMx5lsZAvWDePVBP/HpKaxojC7HFxYFx5u9N2GWSf8Q5Fw5DIeP4oZD8cNDPOXZTppDONXpbg/tMk1iNC7GBncePjuXlf5Ev5iEiMCgO/JfJLy1aWpFoceRsAAAAAElFTkSuQmCC" alt="" class="feature-icon center-block">
+            <div class="margin-medium"></div>
+            <h2 class="text-center">Fast. Smooth. Powerful.</h2>
+            <div class="margin-small with-decoration"></div>
+            <div class="margin-small"></div>
+            <div class="feature-description">
+              <p>Packing a Qualcomm© Snapdragon™ 801 processor with 2.5GHz Quad-Core CPUs, the OnePlus One's operational capacity and performance are enhanced by Qualcomm's heterogeneous computing approach.</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 bg-light-gray">
+          <div class="feature-box" style="height: 835px;">
+            <img src="data:image/png;base64,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" alt="" class="feature-icon center-block">
+            <div class="margin-medium"></div>
+            <h2 class="text-center">Best in Class Memory</h2>
+            <div class="margin-small with-decoration"></div>
+            <div class="margin-small"></div>
+            <div class="feature-description">
+              <p>Using the new standard EMMC 5.0 you’ll be able to access and write on our 16GB or 64GB of internal flash memory in the blink of an eye. 3GB of LP-DDR3 RAM running at 1866MHz allows flawless multitasking of even the most demanding apps.</p>
+               <p>&nbsp;</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 bg-gray">
+          <div class="feature-box" style="height: 835px;">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALAAAACwCAMAAACYaRRsAAABNVBMVEUSg6////8Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg68Sg6+09lXSAAAAZnRSTlMAAAECAwQGCAkKDRAUFhcYGRwgISQlJicoKy4vMDEzOEFCRUlNUFNUXV5hY2RnanF3eXyAg4eIi42OmJydn6CpqquwsrS3u7y+wMLFy9HU1dve4OHj5ufo6+zw8fP19vf5+vv8/f4a5R0dAAACy0lEQVR4Ae3X2VIyVxTF8W76QxFxUBwUWxw0OEjjEGdBEwcl4IBxRlRUXO//COlYuQlVqXSl99nhYv3vT9Xv7uxl2f8l6+9NFuv4t+rFSesfs4MnAc5+IUhf2RYBJ98RrPdka4DXELS11gAXELRCa4D3EbR9aTDBBBNMMMEEE9wx5DZ1hKAduU0NdRgGJ9avINvVesIg2HuGfM+eMfAmzLRpCLyI7z6rTdW/glavNvWJ7xaNgDur8CuMOX++EsoZK8Cv2mkCvAy/3F+v5MrBb9kEuATg2BYHW8cASibATwAyBsAZAE8mwPAbNwAeh58psGsA7LY8mGCCCSaYYIIJJphgggkmmGCCCSaYYIIJJphgggkmmGCCCSaYYIIJJji2elEN38VqTAkcP4dM53Ed8C6k2lUBx94g1VtMAzwCuUY0wC7kcgluOTDBBBNMMMFJyJXUADt3kOrO0QDbOUiVU1ocW5BpS23TuRsHh2E72HA5QoOCCSZ4au/0t7Cd7k1pgZ08ZMo7OuAVSLWiAv7xCKkef2iAByDXQFgw72GCCSaYYIIJHoZcwxrgthqkqrVpgO1tSLVtqYDbzyDTWbsO2I56xevfw3Zd9KIcoQHBBBPcvfRz+Ja61cDeCyR68ZTAGUiV0QFXIFVFBdwHufrCgnkPE0wwwQQTTPAo5BrVAMc/INVHXANs/wqpfrFUwL03kOmmVwdsd+VrCF8t36U3Qp2e/rD1OFzN/yOY4NTsT2GbTemBJy4h0eWEEjj9Cple0zrgMqQqq4ATkCuhAU5BrlRYMA94ggkmmGCC+dPJ3xK81vTuYS6OtIFNlzYFfgAwb2A1zwN4MAE+AVCOiIMjZQAnJsBZ+O1EhMGRHfhlTYBjt/ArzQ32yzU4V4LfbcwE2J5pwEyNGdsI2PbMiBueZQhsT1cgX2XaMga2owuH9w3I1bg/XIha8uBW6g8j7o4mz2m0hAAAAABJRU5ErkJggg==" alt="" class="feature-icon center-block">
+            <div class="margin-medium"></div>
+            <h2 class="text-center">All Day Power Efficiency</h2>
+            <div class="margin-small with-decoration"></div>
+            <div class="margin-small"></div>
+            <div class="feature-description">
+              <p>Shipping with the energy efficient Qualcomm© Snapdragon™ 801 chipset, the One’s 3100 mAh battery fits perfectly into the sleek body. The energy efficient display features technology that adjust the level of backlight and differentiate between dynamic and static content on your screen.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="container-infinite bg-light-gray">
+      <div class="container-text experience">
+        <h2 class="text-black text-center">Experience More</h2>
+        <div class="margin-small with-decoration"></div>
+        <div class="margin-small"></div>
+        <p class="experience-description">The OnePlus One features a 5.5” 1080p full HD JDI screen with LTPS technology for a higher pixel density and sharper picture. The IPS screen instantaneously responds to even the slightest touch with TOL (Touch on Lens) technology, which removes the distance between the touch sensor and the display panel. It also makes the screen 300% more shatterproof than OGS technology. Gorilla© Glass 3 protects the screen against scratches, and with 178 degree vision, you can enjoy it from just about any angle.</p>
+        <div class="margin-huge"></div>
+        <img class="lazy img-responsive center-block" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/experience-more.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/experience-more.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/experience-more@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/experience-more.png" style="display: block;">
+      </div>
+    </div>
+    <div class="container-infinite bg-white">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 bg-gray">
+          <div class="size-matters clearfix">
+            <h2 class="text-black">Size Matters</h2>
+            <div class="margin-small with-decoration-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">Measuring just 8.9mm, the OnePlus One is ergonomic and easy to grip, with a tapered edge of just 4.6mm. Choose either Silk White or Sandstone Black, both unique textures, for the feel of a premium device that is built to last.</p>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/size-matters.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/size-matters.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/size-matters@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/size-matters.png" style="display: block;">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 bg-white">
+          <div class="clear-speaker">
+            <h2 class="text-black">Loud and Clear</h2>
+            <div class="margin-small with-decoration-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">Stereo recording and tri-microphone noise cancelling technology are incorporated directly into the OnePlus One. Three microphones work together to identify, isolate and enhance your voice, while simultaneously filtering background noise.</p>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/clear-speaker.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/clear-speaker.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/clear-speaker@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/clear-speaker.png" style="display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-infinite bg-gray">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4 bg-white">
+          <div class="multi-lense">
+            <h2 class="text-black">Multi Lens Optics</h2>
+            <div class="margin-small with-decoration-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">Our camera boasts 6 physical lenses. Your photos will be more precise and detailed without suffering from distortion often caused by lower apertures.</p>
+            <div class="margin-small"></div>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense@2x.jpg 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg" style="display: block;">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-4 bg-gray">
+          <div class="front-camera">
+            <h2 class="text-black">5 MP Front Facing Camera</h2>
+            <div class="margin-small with-decoration-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">With a 5 megapixel camera adorning the front of the OnePlus One, selfies will be more captivating than ever. The extra-wide 80º viewing angle captures more area than other phones so your pictures will include more background without distortion.</p>
+            <div class="margin-huge"></div>
+            <div class="margin-small"></div>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png" style="display: block;">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 bg-black">
+          <div class="sony-sensor">
+            <h2>Sony Exmor<em>™</em> Sensor</h2>
+            <div class="margin-small with-decoration-white-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">Boasting a 13 megapixel Sony Exmor IMX214 camera with f/2.0 aperture, the OnePlus One camera takes amazing pictures even in low light conditions. Shoot anytime, anywhere for bright, sharp photos.</p>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor@2x.jpg 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg" style="display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-infinite bg-gray">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <div class="stay-connected">
+            <h2 class="text-black">Stay connected</h2>
+            <div class="margin-small with-decoration-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">Enjoy blazing fast and smooth connectivity whether you're around the corner or across the world with OnePlus One powered by Qualcomm© Snapdragon™ processor with a 4G LTE multimode modem. Unlocked and contract-free, roam wherever you'd like the One by your side.</p>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/stay-connected.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/stay-connected.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/stay-connected@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/stay-connected.png" style="display: block;">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="cyanogen-os">
+            <h2 class="text-black">Cyanogen OS 12</h2>
+            <div class="margin-small with-decoration-left"></div>
+            <div class="margin-small"></div>
+            <p class="description">Powered by Android™, Cyanogen brings the features you love while giving you the freedom to mold your mobile domain. Options like Quiet Hours, an enhanced home screen, and a configurable Quick Settings panel are just a few ways you can control how you and your One connect.</p>
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/candy-bar.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/candy-bar.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/candy-bar@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/candy-bar.png" style="display: block;">
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<script type="text/javascript" src="//content.oneplus.net/js/oneplus2015/plugins/jquery.lazyload.js"></script>
+<script>
+$(document).ready(function(){
+    $("img.lazy").lazyload({
+      effect : "fadeIn"
+    });
+ })
+var $boxes = $('.feature-box');
+    var height = 0;
+    for(var i=0; i<$boxes.length; i++) {
+      var newHeight = $boxes.eq(i).outerHeight();
+      height = height > newHeight? height : newHeight;
+    }
+    $boxes.css('height',height);
+</script>
+</div>
+{% endif %}
+{% if oneplus.model_name == 'Oneplus X' %}
+<p>
+OnePlus X smartphone was launched in October 2015. The phone comes with a 5.00-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels at a PPI of 441 pixels per inch.
+The OnePlus X is powered by 2.3GHz quad-core Qualcomm Snapdragon 801 processor and it comes with 3GB of RAM. The phone packs 16GB of internal storage that can be expanded up to 128GB via a microSD card. As far as the cameras are concerned, the OnePlus X packs a 13-megapixel primary camera on the rear and a 8-megapixel front shooter for selfies.
+The OnePlus X runs Android 5.1.1 and is powered by a 2525mAh non removable battery. It measures 140.00 x 69.00 x 6.90 (height x width x thickness) and weigh 138.00 grams.
+The OnePlus X is a dual SIM (GSM and GSM) smartphone that accepts Nano-SIM and Nano-SIM. Connectivity options include Wi-Fi, GPS, Bluetooth, USB OTG, FM, 3G and 4G (with support for Band 40 used by some LTE networks in India). Sensors on the phone include Proximity sensor, Accelerometer, Ambient light sensor and Gyroscope.
+</p>
+{% endif %}
+{% if oneplus.model_name == 'Oneplus 2' %}
+<div class="refurbish">
+<link rel="stylesheet" href="//content.oneplus.net/skin/frontend/oneplus2015/default/styles/plugins/swiper.min.css">
+<link rel="stylesheet" href="//content.oneplus.net/skin/frontend/oneplus2015/default/styles/feature-two.css">
+<!-- overview -->
+    <div class="main-section feature-two">
+      <input type="hidden" value="OnePlus 2" id="titleText">
+      <!-- topic panel -->
+      <div class="container-infinite">
+        <div class="topic-panel overview-topic-panel show">
+          <div class="overview-topic-img">
+            <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/overview-topic-img.png" alt="">
+            <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/overview-topic-img-m.png" alt="">
+          </div>
+          <div class="topic-text-content text-center">
+            <div class="overview-topic-text">
+              <h1>OnePlus 2</h1>
+              <h2 class="text-title">Flagship Killer</h2>
+              <p class="text-describe">With the OnePlus 2, we have something bold to say. We believe that great products come from great ideas, not multi-million dollar marketing campaigns. We believe “that’s just the way things are” is almost always the wrong answer. Most of all, we believe that great things should be shared. </p>
+              <h3>This is the OnePlus 2.</h3>
+            </div>
+            <div class="installment installment1">
+              <div>
+                <h4><strong>Sandstone Black</strong> with 64GB storage</h4>
+                <span class="price">₹ 22,999</span>
+                <a href="https://oneplusstore.in/oneplus-2" class="btn" style="margin-bottom: 2px;" track-key="2c2202dd40bf365fd671bfc87c33adc8" et-attached="1" without-text-key="881d243572ca96dbd43be81770539568">Buy now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- feature navigation -->
+      <div class="container-infinite feature-nav">
+  <div class="feature-nav-wrap" id="featrueNav">
+    <div class="meet-the-two"><block>Meet the </block>OnePlus 2</div>
+    <ul class="menu">
+      <li class="active"><a data-menu="overview" href="https://oneplusstore.in/2" track-key="a56d3b24391b4a26dcf4618fe272b045" et-attached="1" without-text-key="572915a64a56386f617bc0d453e911bb">Overview</a></li>
+      <li><a data-menu="design" href="https://oneplusstore.in/2/design" track-key="fa66a7c42b1df5447249e8006f5579e9" et-attached="1" without-text-key="decd1f45bbc32817db0ccab67d8854b2">Design</a></li>
+      <li><a data-menu="technology" href="https://oneplusstore.in/2/technology" track-key="6c181ee251ddb3eebdd365aa111ae59b" et-attached="1" without-text-key="968777adc522326a0c85ebe974df3004">Technology</a></li>
+      <li><a data-menu="camera" href="https://oneplusstore.in/2/camera" track-key="9ab754f6ca0284c7f7fc018a327ecd5c" et-attached="1" without-text-key="03af692f3da3f26638ffd1ee3f9c34ce">Camera</a></li>
+      <li><a data-menu="oxygenos" href="https://oneplusstore.in/2/oxygenos" track-key="6e806f0539d24595d88cf752a3469da4" et-attached="1" without-text-key="52f46155c3186a2316003f679a7613d6">OxygenOS</a></li>
+      <li><a data-menu="specs" href="https://oneplusstore.in/2/specs" track-key="8e02dc19c4995ee661dbd93104443890" et-attached="1" without-text-key="af289f4f299e2b03eac2979238ead3a1">Specs</a></li>
+    </ul>
+    <div class="btn" track-key="3d378c6f0133cf84ad308ce240d1897c" et-attached="1" without-text-key="d451d54d5a5922bc2eb0712cf78f580d"><a href="https://oneplusstore.in/oneplus-2" track-key="2c2202dd40bf365fd671bfc87c33adc82" et-attached="1" without-text-key="881d243572ca96dbd43be81770539568">Buy now</a></div>
+    <div class="arrow">
+      <i class="arrow-left"></i><i class="arrow-right"></i>
+    </div>
+  </div>
+</div>
+      <!-- image show panel -->
+      <div class="images-show-panel">
+        <div class="wider-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-usb.jpg" alt="">
+          <div class="text-box">
+            <h3>USB Type-C</h3>
+            <p>The latest in charging and data transfer. Reversible and fumble-free. </p>
+          </div>
+        </div>
+        <div class="normal-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-camera.jpg" alt="">
+          <div class="text-box">
+            <h3>Optical image stabilization</h3>
+            <p>Cancels out unwanted shakes and bumps for incredibly sharp pictures and smooth videos.</p>
+          </div>
+        </div>
+        <div class="normal-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-sim.jpg" alt="">
+          <div class="text-box">
+            <h3>Dual SIM</h3>
+            <p>Don’t lug around two phones or change out SIM cards while traveling. Stay connected to two networks, simultaneously.</p>
+          </div>
+        </div>
+        <div class="longer-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-slider.jpg" alt="">
+          <div class="text-box">
+            <h3>Alert slider</h3>
+            <p>Effortlessly switch between three notification profiles without ever taking the OnePlus 2 out of your pocket.</p>
+          </div>
+        </div>
+        <div class="normal-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-focus.jpg" alt="">
+          <div class="text-box">
+            <h3>Laser autofocus</h3>
+            <p>Take amazing photos with ease. An automatic, touch-free focus in under 0.2 seconds.</p>
+          </div>
+        </div>
+        <div class="normal-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-keys.jpg" alt="">
+          <div class="text-box">
+            <h3>Customizable navigation keys</h3>
+            <p>Hardware or on-screen buttons. Swappable recent apps and back buttons. The choice is yours.</p>
+          </div>
+        </div>
+        <div class="wider-box">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/images-show-fingerprint.jpg" alt="">
+          <div class="text-box">
+            <h3>Fingerprint sensor</h3>
+            <p>Quickly and securely unlock your OnePlus 2 with a simple press. </p>
+          </div>
+        </div>
+      </div>
+      <!-- video show panle -->
+      <div class="video-shwo-panel">
+        <div class="play-btn" data-play="false">
+          <a href="#" class="KM_2_overview_all_watch_video " track-key="19e2c0bd70992b359d8854fa766dff8d" et-attached="1" without-text-key="dbede508bd5df315e38b66f3949bc39c"><i class="i-play"></i><br>Watch the Video</a>
+        </div>
+        <iframe class="play-box" id="videoplayer" frameborder="0" allowfullscreen="1" title="YouTube video player" width="1106" height="622.125" src="https://www.youtube.com/embed/UATpMHitrA0?enablejsapi=1&amp;origin=https%3A%2F%2Foneplusstore.in&amp;widgetid=1" style="width: 534px; height: 300.375px;"></iframe>
+      </div>
+
+      <!-- imperss panel -->
+      <div class="container-infinite impress-panel ov-hidden">
+        <div class="container-text">
+          <div class="impress-text">
+            <h2 class="text-title underline-left">Specs that Impress</h2>
+            <p class="text-describe">When you vow to Never Settle, you can’t cut any corners. The Qualcomm® Snapdragon™ 810 processor, featuring 4G LTE and an octa-core CPU, effortlessly powers through demanding apps, games, and HD video. Paired with a 3,300 mAh battery, your OnePlus 2 will stay charged through even the busiest of days. </p>
+            <div class="learn-link"><a data-menu="technology" href="https://oneplusstore.in/2/technology" track-key="21f8bdb8b69a666cb092c1fa03b81d0e" et-attached="1" without-text-key="968777adc522326a0c85ebe974df3004">Learn more about Technology</a></div>
+          </div>
+        </div>
+        <div class="impress-img"><img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/impress-img.png" alt=""></div>
+      </div>
+      <div class="container-infinite row">
+        <!-- quick view first panel -->
+        <div class="col-xs-12 col-sm-12 col-md-6 see-more-panel">
+          <div class="see-more-text" style="height: auto;">
+            <h2 class="text-title underline-left">See More. Do More.</h2>
+            <p class="text-describe">We use our smartphones to stay connected to the world around us. A lot of time is spent looking at our smartphone’s screen, so it should be amazing. The OnePlus 2’s 5.5” IPS LCD display produces incredibly sharp lines and true-to-life colors. Experience crystal clear images, video, and text in any setting. </p>
+            <div class="learn-link"><a data-menu="technology" href="https://oneplusstore.in/2/technology" track-key="a8cc3491fa1f5ca35b93e3659036416b" et-attached="1" without-text-key="968777adc522326a0c85ebe974df3004">Learn more about the Display</a></div>
+          </div>
+          <div class="see-more-img"><img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/pixel-perfect-img.png" alt=""></div>
+        </div>
+        <!-- quick view secd panel -->
+        <div class="col-xs-12 col-sm-12 col-md-6 born-global-panel">
+          <div class="born-global-text" style="height: auto;">
+            <h2 class="text-title underline-left">Born Global</h2>
+            <p class="text-describe">Never be tied down. The OnePlus 2 comes carrier-unlocked with wide range band support for service providers worldwide. And, with dual SIM capabilities, you can connect to two networks simultaneously to travel with ease. Manage your work life and personal life without the need to carry around two phones. It’s one device, for everything. </p>
+          </div>
+          <div class="born-global-img"><img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/born-global-img.png" alt=""></div>
+        </div>
+      </div>
+
+      <!-- camera quick view panel -->
+      <div class="container-infinite camera-view-panel">
+          <div class="topic-text-content text-center">
+            <div class="camera-view-text">
+              <h2 class="text-title">Capture Your World</h2>
+              <p class="text-describe">Our camera sensor’s large pixels collect more light for less noise and exceptional performance in dark conditions. Advanced laser autofocus and optical image stabilization systems ensure that you never miss that perfect shot, while 6 lens elements prevent distortion and improve clarity. </p>
+              <div class="learn-link"><a data-menu="camera" href="https://oneplusstore.in/2/camera" track-key="245626a3a12dd8f6167e279b2443c23c" et-attached="1" without-text-key="03af692f3da3f26638ffd1ee3f9c34ce">Learn more about the Camera</a></div>
+            </div>
+        </div>
+      </div>
+      <div class="container-infinite row">
+        <!-- StyleSwap view panel -->
+        <div class="col-xs-12 col-sm-12 col-md-6 styleSwap-view-panel">
+          <div class="styleSwap-view-text" style="height: auto;">
+            <h2 class="text-title underline-left">Distinctly Yours</h2>
+            <p class="text-describe">Express your own personal style. Change up your look in seconds with an array of available StyleSwap covers in premium materials.</p>
+            <div class="learn-link"><a data-menu="design" href="https://oneplusstore.in/2/design" track-key="2ee67ed3af8eba3e74bded967d6867cd" et-attached="1" without-text-key="decd1f45bbc32817db0ccab67d8854b2">Learn more about StyleSwap</a></div>
+          </div>
+          <div class="styleSwap-view-img">
+            <div class="styleSwap-view-img-wrap">
+              <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/styleSwap-view-img.png" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- oxygenos view panel -->
+        <div class="col-xs-12 col-sm-12 col-md-6 oxygenos-view-panel">
+          <div class="oxygenos-view-text" style="height: auto;">
+            <h2 class="text-title underline-left">A Breath of Fresh Air</h2>
+            <p class="text-describe">The OnePlus 2 runs OxygenOS, our light, powerful software built on Android. We've kept the best of the stock experience and enhanced it with a handful of thoughtful features and optimizations.</p>
+            <div class="learn-link"><a data-menu="oxygenos" href="https://oneplusstore.in/2/oxygenos" track-key="971b3e3ab3e2d705115f39c1c46ddfc8" et-attached="1" without-text-key="52f46155c3186a2316003f679a7613d6">Learn more about OxygenOS</a></div>
+          </div>
+          <div class="oxygenos-view-img"><img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/oxygenos-view-img.png" alt=""></div>
+        </div>
+      </div>
+      <!-- design view panel -->
+      <div class="container-infinite design-view-panel">
+        <div class="topic-text-content text-center">
+          <div class="design-view-text">
+            <h2 class="text-title">Smartphone Technology, Watchmaking Craftsmanship.</h2>
+            <p class="text-describe">A lightweight, resilient aluminum and magnesium alloy frame and stainless steel accents unify the OnePlus 2’s sleek metal design. Durability and sophistication with an unrivaled premium feel.</p>
+            <div class="learn-link"><a data-menu="design" href="https://oneplusstore.in/2/design" track-key="68c0eac6db4c1388cb67b6b38c23a06b" et-attached="1" without-text-key="decd1f45bbc32817db0ccab67d8854b2">Learn more about Design</a></div>
+          </div>
+        </div>
+        <div class="design-view-img-desktop">
+          <img src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/design-view-img-desktop.png" alt="">
+        </div>
+        <div class="design-view-img-mobile">
+          <img class="lazy taller-img" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/best-materials-taller-img.png" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+          <img class="lazy tall-img" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/two/best-materials-tall-img.png" alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC">
+        </div>
+      </div>
+    </div>
+    <!-- build:js(dev) scripts/feature-two.js -->
+    <script type="text/javascript" src="//content.oneplus.net/js/oneplus2015/plugins/jquery.lazyload.js"></script>
+    <script type="text/javascript" src="//content.oneplus.net/js/oneplus2015/plugins/swiper.jquery.min.js"></script>
+    <script type="text/javascript" src="//content.oneplus.net/js/oneplus2015/feature-two.js"></script>
+    <script>
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api/";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player, playerStatus,
+          playerWidth = $(window).width(),
+          playerHeight = playerWidth/(640/360);
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('videoplayer', {
+          videoId: 'UATpMHitrA0',
+          width: playerWidth,
+          height: playerHeight
+        });
+      }
+    </script>
+    <!-- endbuild -->
+</div>
+{% endif %}
+{% if oneplus.model_name == 'Oneplus 3' %}
+<div class="refurbish">
+
+<div class="std"><link rel="stylesheet" href="//content.oneplus.net/skin/frontend/oneplus2015/default/styles/plugins/swiper.min.css?v=201706291059">
+    <link rel="stylesheet" href="//content.oneplus.net/skin/frontend/oneplus2015/default/styles/oneplus3/oneplus3.css?v=201706291059">
+
+    <style type="text/css">
+        @media screen and (max-width: 767px) {
+            .dash-charge-section .dash-charge-text {z-index: 5}
+        }
+    </style>
+    <!--op3 start-->
+        <!-- first screen -->
+        <div class="container-infinite overview-hero">
+            <div class="w1200">
+                <div class="overview-hero-text en" style="transform: translate(0%, -10%) matrix(1, 0, 0, 1, 0, 0);">
+                     <style>
+                        .sub-title-2{
+                            font-size:30px;
+                            margin-bottom:10px;
+                        }
+                        .overview-hero .main-title{
+                            margin-bottom:50px;
+                        }
+                        .overview-hero .price{
+                            margin-bottom:10px;
+                        }
+                        .overview-hero .rate-area{
+                            margin-top:50px;
+                            font-size:12px;
+                        }
+                        .overview-hero .rate-area>div{
+                            margin-top:5px;
+                            margin-bottom:20px;
+                        }
+                        #dash-svg{
+                            width:100px;
+                            position:absolute;
+                            bottom:10%;
+                            right:20px;
+                            z-index:10;
+                        }
+                        @media screen and (max-width: 767px) {
+                            .sub-title-2{
+                                font-size:20px;
+                            }
+                            .overview-hero .rate-area{
+                                display:none;
+                            }
+                            #dash-svg{
+                                width:80px;
+                                bottom:5%;
+                            }
+                        }
+                    </style>
+                    <h3 class="sub-title-2">Best Rated Smartphone, Ever</h3>
+                    <h2 class="main-title">OnePlus <span class="en-logo-3"><svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 79.704 110.423" enable-background="new 0 0 79.704 110.423" xml:space="preserve">
+                    <path d="M45.418,29.53L66.483,0H20.422l-5.059,7.092h37.352L32.009,36.117h6.996c18.53,0,33.607,15.076,33.607,33.607
+                        S57.535,103.33,39.005,103.33c-17.261,0-31.522-13.082-33.396-29.851L0,81.345c5.013,16.797,20.601,29.078,39.005,29.078
+                        c22.441,0,40.698-18.258,40.698-40.698C79.704,49.466,64.823,32.615,45.418,29.53"></path>
+                    </svg></span></h2>
+
+                    <p class="price">₹ 27,999</p>
+                   <a href="#" class="overview-buy-btn" track-key="3613650738660637c76718246d2c9d152" et-attached="1" without-text-key="73791959760a58d3b8bbf56ed0702df0">Buy now</a>
+                </div>
+                <div class="overview-hero-img">
+                    <div class="overview-top-front" style="transform: translate(0%, 10%) matrix(1, 0, 0, 1, 0, 0);"></div>
+                    <div class="overview-top-back" style="transform: translate(0%, -10%) matrix(1, 0, 0, 1, 0, 0);"></div>
+                    <div class="overview-hero-light-up" style="transform: translate(0%, 9.31609%) translate3d(0px, 0px, 0px);"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container-infinite text-center overview-text">
+            <div class="w1200 describe-text">
+                It’s about time for a smartphone without compromises. A smartphone conceived and built by tech enthusiasts, hand-in-hand with users. A smartphone born from amazing technology, design, and innovation.
+                <br>
+                <br>
+                It’s about time for the OnePlus 3.
+        <br>
+        <br>
+        But, you shouldn’t take our word for it. You be the judge.
+            </div>
+        </div>
+        <!-- video -->
+        <div class="container-infinite text-align phone-video" id="videoBox" data-src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/oneplus3/video/op3-preview.mp4"><video style="margin-left: -1110.5px;" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/oneplus3/video/op3-preview.mp4" autoplay="" loop=""></video>
+          <div class="div-center text-center">
+            <a href="javascript:;" class="btn-play" track-key="bfff36772d33c6c48d58f1ce80dcc64b" et-attached="1" without-text-key="26eacc9389ee2df77f171e89c4dc4fb4"><i class="i-play"></i></a>
+            <p>Watch the video</p>
+          </div>
+        </div>
+        <!-- video 结束-->
+        <!-- dash闪充 -->
+        <div class="container-infinite text-align black-section dash-charge-section">
+            <div class="section-padding-top dash-charge-text">
+                <div class="w1200">
+                    <div class="text-area-wider">
+                        <h3 class="sub-title">Dash Charge</h3>
+                        <h2 class="main-title">Faster. Safer. Cooler.</h2>
+                        <div class="describe-text">Not all fast charging technologies are created equal. Dash Charge for the OnePlus 3 is faster, safer, cooler - and simply better - than any other charging technology available today. Providing you a day’s power in half an hour, Dash Charge will change the way you think about charging.
+                            <div class="margin-small"></div>
+                            <dfn class="small">Dash Charge technology is only compatible with the Dash Charge type-C cable and adapter.</dfn>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dash-charge-img">
+                <div class="dash-charge-shadow"></div>
+                <div class="dash-charge-phone"></div>
+                <div class="dash-charge-cable push"></div>
+                <div class="dash-charge-wallpaper lighten"></div>
+                <div class="dash-charge-phone-footer"></div>
+            </div>
+        </div>
+        <!-- babyskin2.0 -->
+        <div class="container-infinite section-padding-top section-padding-bottom babyskin-section">
+            <div class="w1200">
+                <div class="text-area-side">
+                    <h3 class="sub-title">Design</h3>
+                    <h2 class="main-title">Please touch the <br class="m-break">merchandise.</h2>
+                    <div class="describe-text">We’ve taken our obsession with aesthetics, quality, and usability to a whole new level. The OnePlus 3’s metal unibody is carved from a single slab of premium aluminum, resulting in an ultra-thin design with a satisfying, solid build.</div>
+                </div>
+                <div class="babyskin-img">
+                    <div class="babyskin-back-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    <div class="babyskin-front-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                    <div class="babyskin-img-shadow" style="transform: translate(0%, -5%) matrix(1, 0, 0, 1, 0, 0);"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 拍照 -->
+        <div class="container-infinite text-align section-padding-top camera-section">
+            <div class="w1200">
+                <div class="text-area-wider">
+                    <h3 class="sub-title">Camera</h3>
+                    <h2 class="main-title">Smart Capture</h2>
+                    <div class="describe-text">Our 16MP camera boasts lightning-fast shutter speed, snappy autofocus, and intelligent software to deliver an unmatched user experience. Cutting-edge noise reduction technology ensures that every shot is sharp and crisp, while two advanced stabilization methods prevent unwanted shakes and movements. Capture that stunning photo or video, every time.</div>
+                    <ul class="params-summary-list">
+                        <li>
+                            <i class="i-shutter-speed"></i>
+                            <label>Shutter <br class="m-break">speed</label>
+                        </li>
+                        <li>
+                            <i class="i-autofocus"></i>
+                            <label>Autofocus</label>
+                        </li>
+                        <li>
+                            <i class="i-dynamic-de-noise"></i>
+                            <label>Dynamic <br class="m-break">De-noise</label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- HDR样张 -->
+        <div class="container-infinite hdr-section">
+            <div class="hdr-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+            <div class="hdr-phone"></div>
+        </div>
+        <!-- 性能 -->
+        <div class="container-infinite text-align black-section section-padding-top section-padding-bottom tech-section">
+            <div class="w1200">
+                <div class="text-area-wider">
+                    <h3 class="sub-title">Technology</h3>
+                    <h2 class="main-title">Don’t worry, we got this.</h2>
+                    <div class="describe-text">We packed 6GB of LPDDR4 RAM into the OnePlus 3. Overkill? Maybe. Awesome? Yes. The top-of-the-line Qualcomm® Snapdragon™ 820 processor and Adreno™ 530 GPU make apps, games, and other intensive applications a breeze. Dual nano SIM support means you’ll always be connected, and with our vivid 5.5” Optic AMOLED display, all of that power under the hood is just as nice to look at as it is to use. </div>
+                    <ul class="params-summary-list">
+                        <li>
+                            <!-- <i class="i-dash-grey"></i> -->
+                            <em>6GB</em>
+                            <label>RAM</label>
+                        </li>
+                        <li>
+                            <em>Snapdragon™ 820</em>
+                            <label>Qualcomm®</label>
+                        </li>
+                        <li>
+                            <i class="i-optic"></i>
+                            <label>Display</label>
+                        </li>
+                        <li>
+                            <em>Adreno™ 530</em>
+                            <label>GPU</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tech-phone" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+                <p class="tech-phone-tip">Asphalt 8: Airborne © 2013 Gameloft. All cars and brands are properties of their respective owners.</p>
+            </div>
+        </div>
+
+
+        <!-- oxygenos -->
+        <div class="container-infinite text-align section-padding-top h2os-section">
+            <div class="w1200">
+                <div class="text-area-wider">
+                    <h3 class="sub-title">OxygenOS</h3>
+                    <h2 class="main-title">Lighter, more powerful, and super sweet</h2>
+                    <div class="describe-text">Our latest version of OxygenOS makes life a little bit easier and a lot more exciting. We’ve created a fast, clean, and bloat-free OS, based on Android Marshmallow. Features that give you more control to personalize your smartphone experience, like screen-off gestures and customizable buttons, are all built right in. It’s the pure Android experience you love, enhanced for customization, performance, and battery life. Sounds pretty sweet, right? </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    <!--op3 end-->
+    <!--video's box start-->
+    <div class="container-infinite video-box" style="">
+      <div class="div-center text-center full-width">
+        <span class="close-video"></span>
+        <iframe id="videoplayer" frameborder="0" allowfullscreen="1" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/kwnXZzBWvqc?enablejsapi=1&amp;origin=https%3A%2F%2Foneplusstore.in&amp;widgetid=1" style="height: 56.25px; width: 100%;"></iframe>
+      </div>
+    </div>
+    <!--video's box end-->
+
+
+    <script src="//content.oneplus.net/js/oneplus2015/plugins/greensock/TweenMax.min.js?v=201706291059"></script>
+    <script src="//content.oneplus.net/js/oneplus2015/plugins/scrollMagic/ScrollMagic.min.js?v=201706291059"></script>
+    <script src="//content.oneplus.net/js/oneplus2015/plugins/scrollMagic/plugins/animation.gsap.js?v=201706291059"></script>
+    <script src="//content.oneplus.net/js/oneplus2015/plugins/swiper-3.3.1.jquery.min.js?v=201706291059"></script>
+    <script src="//content.oneplus.net/js/oneplus2015/oneplus3.js?v=201706291059"></script>
+    <script src="//content.oneplus.net/js/oneplus2015/oneplus3-overview.js?v=201706291059"></script>
+    <script type="text/javascript">
+      var tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/player_api/";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player('videoplayer', {
+          videoId: 'kwnXZzBWvqc'
+        });
+      }
+    </script></div>
+
+
+</div>
+{% endif %}
+
+{% if oneplus.model_name == 'Oneplus 5' %}
+<div class="refurbish">
+<link rel="stylesheet" href="https://opstatics.com/mage/styles/859/oneplus5/index.css?20170929065904">
+<style>
+.section-dash-charge .s-container .slide-wrap .slide-item.item-3{
+  background-image: url('https://image01.oneplus.net/shop/201709/01/101/0835478a5d12dc715f38c2a5006f7ddd.jpg')
+}
+@media screen and (max-width: 768px){
+.section-dash-charge .s-container .slide-wrap .slide-item.item-3{
+  background: none
+}
+.section-dash-charge .s-container .right{
+ height: 100vw;
+}
+.section-dash-charge .s-container .right .line-box{
+ margin: 2rem 2rem 2rem;
+}
+}
+</style>
+<div class="main-body body-index">
+    <section data-nav-color="nav-bar-black" class="section section-video animated-box animated">
+        <div class="s-container">
+            <a href="#" class="as-show-video" data-source="" video-key="i0w88h8mpUo" track-key="04a81fb121ac6f334f3dd96fcd499b36" et-attached="1" without-text-key="04a81fb121ac6f334f3dd96fcd499b36"></a>
+        </div>
+    </section>
+    <a id="camera" name="camera" track-key="980a334711dee7a6d9aa9680b0eae2b7" et-attached="1" without-text-key="980a334711dee7a6d9aa9680b0eae2b7"></a>
+    <section data-anchor="camera" class="section section-dual-camera">
+        <div class="s-container">
+            <div class="first animated-box animated">
+                <div class="bottom-bg"></div>
+                <div class="first-content">
+                     <h2 class="ant1">Dual Camera</h2>
+                    <div class="text-box">
+                        <ul>
+                            <li class="item-portrait item-effect">
+                                <div class="ant1">
+                                  <h2 class="sub-title">Dual Camera</h2>
+                                  <h2>Shoot Clearer Photos</h2>
+                                </div>
+                                <div class="ant2">
+                                    <h3>Bokehlicious Portraits</h3>
+                                </div>
+                                <div class="ant3">
+                                    <p class="p-text">
+                                      Capture faces with startling clarity using Portrait Mode on the OnePlus 5. Our new dual camera uses two sensors to create a focal separation between subject and environment, putting the focus on the face you’re capturing while progressively blurring the background for a gentle, yet powerful effect.
+                                      <br>
+                                      <a href="#" class="as-show-video" data-source="" video-key="embZI0jz6N4" track-key="f551a11e952c8abb829f9a88c906e0a8" et-attached="1" without-text-key="cb40287b6525b097b32d6ff0a3fcc49f">Discover Portrait Mode with Kevin Abosch &gt;</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="item-smart item-effect">
+                                <div class="ant1">
+                                  <h2 class="sub-title">Dual Camera</h2>
+                                  <h2>Shoot Clearer Photos</h2>
+                                </div>
+                                <h3>Smart Capture</h3>
+                                <p class="p-text">
+                                  Take the right shot, every time. The OnePlus 5 automatically adjusts to your environment, by optimizing your shot quietly for accuracy and clarity. It's professional quality, automated.
+                                </p>
+                            </li>
+                            <li class="item-pro item-effect active">
+                                <div class="ant1">
+                                  <h2 class="sub-title">Dual Camera</h2>
+                                  <h2>Shoot Clearer Photos</h2>
+                                </div>
+                                <h3>Professional Fine-tuning</h3>
+                                <p class="p-text">
+                                  A new robust Pro Mode lets you customize settings like ISO, shutter speed, and more. Use the histogram, grid lines, and level features to take better photos. Then capture RAW photos for professional-grade post production.
+                                </p>
+                            </li>
+                        </ul>
+                        <ol class="nav-dot nav-black ant4">
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li class="loading"></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="phone-box ant2-o">
+                    <ul>
+                        <li class="portrait"></li>
+                        <li class="smart"></li>
+                        <li class="pro active"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ft-first animated-box animated">
+              <div class="w1200">
+                <div class="phone-reflection"></div>
+              </div>
+            </div>
+            <div class="second">
+                <div class="img-box animated-box ant1 animated" data-nav-color="nav-bar-black"></div>
+                <div class="text-box animated-box animated">
+                    <ul>
+                        <li class="clar item-effect active">
+                            <div class="ant1">
+                                <h3 class="">Effortless Clarity</h3>
+                            </div>
+                            <div class="ant2">
+                                <p class="p-subtext">
+                                  The OnePlus 5 features the highest resolution dual camera on the planet, so photos look clear even if you want to hang one above your couch. Photos are incredibly clear even when captured from a long distance. The OnePlus 5 can zoom in up to 2x without losing clarity.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="auto item-effect">
+                            <div class="ant1">
+                                <h3 class="">Faster Autofocus (Fast AF)</h3>
+                            </div>
+                            <div class="ant2">
+                                <p class="p-subtext ">
+                                  Focusing is 40% faster than the OnePlus 3T. Our dual camera system and intelligent software work together to measure depth and find the perfect focus, instantly.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="aper item-effect">
+                            <div class="ant1">
+                                <h3 class="">Large Aperture</h3>
+                            </div>
+                            <div class="ant2">
+                                <p class="p-subtext">
+                                  Capture clear photos at any time, thanks to the OnePlus 5’s large f/1.7 aperture. Shutter speed is faster too.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ol class="nav-dot nav-black ant3">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="shot-on-oneplus animated-box animated">
+                <h2 class="ant1">Shot on OnePlus</h2>
+                <div class="swiper-wrap ant2">
+                    <div class="swiper-container">
+                        <ul style="transform: translate3d(0px, 0px, 0px); width: 10655.2px;">
+                            <li style="width: 965px; margin-right: 100.521px;" last-width="965" animation-left="0">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example1.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example1-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example1.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Simon Kullenberg</p>
+                              </div>
+                            </li>
+                            <li class="s" style="width: 482.5px; margin-right: 100.521px;" last-width="482" animation-left="1065.5208333333333">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example2.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example2-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example2.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Alessandro Michelazzi</p>
+                              </div>
+                            </li>
+                            <li style="width: 965px; margin-right: 100.521px;" last-width="965" animation-left="1648.0416666666667">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example3.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example3-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example3.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Nikolapeev</p>
+                              </div>
+                            </li>
+                            <li class="s" style="width: 482.5px; margin-right: 100.521px;" last-width="482" animation-left="2713.5625">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example4.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example4-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example4.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Xu Hongxin</p>
+                              </div>
+                            </li>
+                            <li class="s" style="width: 482.5px; margin-right: 100.521px;" last-width="482" animation-left="3296.0833333333335">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example5.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example5-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example5.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Taro</p>
+                              </div>
+                            </li>
+                            <li style="width: 965px; margin-right: 100.521px;" last-width="965" animation-left="3878.604166666667">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example6.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example6-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example6.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Derrick Zhang</p>
+                              </div>
+                            </li>
+                            <li class="s" style="width: 482.5px; margin-right: 100.521px;" last-width="482" animation-left="4944.125">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example7.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example7-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example7.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Taro</p>
+                              </div>
+                            </li>
+                            <li class="s" style="width: 482.5px; margin-right: 100.521px;" last-width="482" animation-left="5526.645833333334">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example8.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example8-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example8.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Alessandro Michelazzi</p>
+                              </div>
+                            </li>
+                            <li style="width: 965px; margin-right: 100.521px;" last-width="965" animation-left="6109.166666666667">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example9.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example9-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example9.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Sylvain Nicolier</p>
+                              </div>
+                            </li>
+                            <li style="width: 965px; margin-right: 100.521px;" last-width="966" animation-left="7174.6875">
+                              <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example10.jpg" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example10-m.jpg" src="https://opstatics.com/mage/images/859/oneplus5/section-dual-camera/example10.jpg">
+                              <div class="desc">
+                                <p class="for-oneplus">Shot On OnePlus</p>
+                                <p>by Javin Lau</p>
+                              </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="arrow arrow-prev" style="display: none;"></div>
+                    <div class="arrow arrow-next" style="display: block;"></div>
+                    <ol class="nav-dot nav-black">
+                        <li class="active"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                    </ol>
+                </div>
+                <p class="p-text">
+                    #ShotonOnePlus sets the stage for the creativity and talent of OnePlus photographers around the globe. Their photos showcase the OnePlus 5 Dual Camera's focus on clarity.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- experience -->
+    <a id="experience" name="experience" track-key="e85f7c8b6acca155ce83cff1cf9befe2" et-attached="1" without-text-key="e85f7c8b6acca155ce83cff1cf9befe2"></a>
+    <section data-anchor="experience" class="section section-experience">
+        <div class="first animated-box animated" data-nav-color="nav-bar-black">
+          <div class="first-content">
+            <div class="main-box">
+              <h2 class="sub-title ant1">Performance</h2>
+              <h2 class="ant1">Smooth Experience</h2>
+              <p class="p-text ant2">
+                The industry-leading Qualcomm® Snapdragon™ 835 processor powers through demanding apps and games – and it's incredibly power efficient.
+              </p>
+            </div>
+            <div class="extral-box ant4">
+              <p class="p-text">
+                Asphalt 8: Airborne © 2015 Gameloft. All cars and brands are properties of their respective owners.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="second animated-box animated">
+          <div class="row-wrap">
+            <div class="row-item row-ram animated-box item-effect active animated">
+              <div class="cell cell-text">
+                <div class="cell-content">
+                  <div class="ant1">
+                    <h3>
+                      More RAM
+                    </h3>
+                  </div>
+                  <div class="ant2">
+                    <p class="p-text">
+                      Open more apps and switch between them instantly. With up to 8GB of LPDDR4X RAM, day to day tasks are snappier than ever, and battery life is better.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="cell cell-image"></div>
+            </div>
+            <div class="row-item row-storage animated-box item-effect animated">
+              <div class="cell cell-text">
+                <div class="cell-content">
+                  <h3>
+                    Faster storage
+                  </h3>
+                  <p class="p-text">
+                   You'll have plenty of room for photos, apps, and files with up to 128GB of onboard storage. And because the OnePlus 5 features new dual-lane technology, overall performance is faster.
+                  </p>
+                </div>
+              </div>
+              <div class="cell cell-image">
+                <div class="cell-content"></div>
+              </div>
+            </div>
+            <div class="row-item row-priority animated-box item-effect animated">
+              <div class="cell cell-text ant1">
+                <div class="cell-content">
+                  <h3>
+                    Intelligent App Prioritizing
+                  </h3>
+                  <p class="p-text">
+                    Our exclusive technology intelligently learns your usage patterns to launch important apps more quickly. It also keeps intrusive apps from harming performance or draining battery.
+                  </p>
+                </div>
+              </div>
+              <div class="cell cell-image"></div>
+            </div>
+          </div>
+          <div class="ant3">
+            <ol class="nav-dot nav-black">
+              <li></li>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+          <div class="item-imgbox ant4">
+            <div class="img-item img-1 active"></div>
+            <div class="img-item img-2"></div>
+            <div class="img-item img-3"></div>
+          </div>
+        </div>
+      </section>
+    <a id="design" name="design" track-key="49068554304f0465c56e73dbdb6175bf" et-attached="1" without-text-key="49068554304f0465c56e73dbdb6175bf"></a>
+    <section data-anchor="design" data-nav-color="nav-bar-black" class="section section-design animated-box animated">
+       <div class="s-container">
+              <div class="main-box">
+                <h2 class="ant1 sub-title">Design</h2>
+                <h2 class="ant1">Carefully Crafted</h2>
+                <p class="p-text ant2">
+                  The more you use the OnePlus 5, the more you'll notice the thoughtful touches that set it apart. Every detail comes together to create an unrivaled user experience.
+                </p>
+              </div>
+              <div class="slide-wrap">
+                <div class="slide-item item-1 item-effect">
+                  <div class="sub-box">
+                    <div class="ant4">
+                      <h3 class="">Stunning Horizon Line</h3>
+                    </div>
+                    <div class="ant5">
+                      <p class="p-text">
+                        The OnePlus 5 looks sleeker than ever, thanks to the Horizon Line. This continuous hard line wraps beautifully around the device, resulting in beautiful shadows when placed in the light.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="img-box"></div>
+                </div>
+                <div class="slide-item item-3 item-effect">
+                  <div class="sub-box">
+                    <h3>Slim, with Stamina</h3>
+                    <p class="p-text">
+                      At just 7.25mm, the OnePlus 5 is our thinnest flagship smartphone ever, yet battery life has been improved by 20% over the OnePlus 3T.
+                    </p>
+                  </div>
+                  <div class="img-box"></div>
+                </div>
+                <div class="slide-item item-4 item-effect active">
+                  <div class="sub-box">
+                    <h3>Beautifully Curved</h3>
+                    <p class="p-text">
+                      We developed and focus tested over 100 variations before finalizing a subtle curvature that perfectly matches look and feel with durability.
+                    </p>
+                    <p class="p-text" style="margin-top: 1rem; max-width:460px;font-size:12px;line-height:18px;"><span style="opacity:0.5;">Did you notice? The NFC antenna is subtly inlaid as vertical line above the camera ring, for an elegant look.</span></p>
+                  </div>
+                  <div class="img-box"></div>
+                </div>
+                <div class="slide-item item-2 item-effect">
+                  <div class="sub-box">
+                    <h3>Built for Control</h3>
+                    <p class="p-text">
+                      Don't want to be bothered? Take control of your notifications with Alert Slider and quickly toggle between 3 customizable profiles right from your pocket.
+                    </p>
+                    <ul class="ul-silent">
+                      <li class="silent active">Silent</li>
+                      <li class="priority">Do not disturb</li>
+                      <li class="all">Ring</li>
+                    </ul>
+                  </div>
+                  <div class="img-box ul-silent-img">
+                    <span class="img-silent active"></span>
+                    <span class="img-priority"></span>
+                    <span class="img-all"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-dot-box ant6">
+                <ol class="nav-dot">
+                  <li class=""></li>
+                  <li class=""></li>
+                  <li class="loading"></li>
+                  <li class=""></li>
+                </ol>
+              </div>
+              <div class="ant7">
+                <div class="item-imgbox">
+                  <div class="img-item img-1 active"></div>
+                  <div class="img-item img-3"></div>
+                  <div class="img-item img-4"></div>
+                  <div class="img-item img-2 ul-silent-img">
+                    <span class="img-silent active"></span>
+                    <span class="img-priority"></span>
+                    <span class="img-all"></span>
+                    <ul class="ul-silent">
+                      <li class="silent active">Silent</li>
+                      <li class="priority">Do not disturb</li>
+                      <li class="all">Ring</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+    </section>
+    <a id="color" name="color" track-key="0b99fe518625f86a2d846a5c96e1704f" et-attached="1" without-text-key="0b99fe518625f86a2d846a5c96e1704f"></a>
+    <section class="section section-color black">
+        <div class="bg-phone transition"></div>
+        <ul class="change-color" id="color-change-list">
+            <li data-color="black" class="active">
+              <h4>
+                <span>Midnight Black</span>
+                <span class="p-text">Sleek and Sophisticated. Experience the allure of a truly deep black, paired with a beautiful matte finish.</span>
+                <em><i></i></em>
+              </h4>
+            </li>
+            <li data-color="gray">
+              <h4>
+                <span>Slate Gray</span>
+                <span class="p-text">An Iconic look. An evolution of our original metal unibody that looks stunning in any light.</span>
+                <em><i></i></em>
+              </h4>
+            </li>
+            <li data-color="gold" class="">
+              <h4>
+                <span>Soft gold</span>
+                <span class="p-text">Power in elegance. Enjoy the subdued tone of natural gold, textured for a silky-smooth grip.</span>
+                <em><i></i></em>
+              </h4>
+            </li>
+        </ul>
+        <b class="closebtn"><i></i></b>
+        <div class="spread-img"></div>
+    </section>
+    <a id="charge" name="charge" track-key="adbd273a78a5fae077e5adc216d4a813" et-attached="1" without-text-key="adbd273a78a5fae077e5adc216d4a813"></a>
+    <section data-anchor="charge" class="section section-dash-charge animated-box animated">
+        <div class="s-container">
+            <div class="slide-wrap">
+                <div class="slide-item item-1 item-effect active">
+                    <div class="item-content">
+                        <div class="left">
+                            <div class="main-box">
+                                <h2 class="ant1 sub-title">Dash Charge</h2>
+                                <h2 class="ant1">A day’s power in half an hour</h2>
+                                <div class="ant2">
+                                    <h3 class="">Change the way you charge</h3>
+                                </div>
+                                <div class="ant3">
+                                    <p class="p-text">
+                                      In just 30 minutes, Dash Charge gives you enough power for the entire day. It’s the end of overnight charging.
+                                    </p>
+                                </div>
+                                <ol class="nav-dot nav-black">
+                                    <li class="loading"></li>
+                                    <li></li>
+                                    <li></li>
+                                </ol>
+                            </div>
+                            <div class="ant4" style="width:100%;">
+                                <div class="video-btn">
+                                    <a href="#" class="as-show-video" data-source="" video-key="5VCdkXOcxS4" track-key="5320749d772248a7d8d834724f0ccd0b" et-attached="1" without-text-key="9ee01e6f56df692fd0e6106be6b5d51f">Comparison video</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <ul class="dashLineNav ant1">
+                                <li><span>Screen on</span></li>
+                                <li><span>Play video</span></li>
+                    `            <li><span>Play game</span></li>
+                            </ul>
+                            <div class="line-box ant3">
+                                <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dash-charge/coordinate-bg.png" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dash-charge/coordinate-bg-m.png" src="https://opstatics.com/mage/images/859/oneplus5/section-dash-charge/coordinate-bg.png">
+                                <div class="line-item line-screen first-active"></div>
+                                <div class="line-item line-video"></div>
+                                <div class="line-item line-game"></div>
+                            </div>
+                            <ol class="ant5">
+                                <li>OnePlus 5</li>
+                                <li>Samsung Galaxy S8</li>
+                                <li>Google Pixel XL</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-item item-2 item-effect">
+                    <div class="main-box">
+                        <h2 class="ant1 sub-title">Dash Charge</h2>
+                        <h2 class="ant1">A day’s power in half an hour</h2>
+                        <h3>Reliable and fast</h3>
+                        <p class="p-text">
+                          Dash Charge delivers stable and consistent charging speeds, by producing a larger electric current rather than increasing pressure.
+                        </p>
+                        <ol class="nav-dot">
+                            <li class=""></li>
+                            <li class=""></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="slide-item item-3 item-effect">
+                    <div class="main-box">
+                        <h2 class="ant1 sub-title">Dash Charge</h2>
+                        <h2 class="ant1">A day’s power in half an hour</h2>
+                        <h3>Cool and stable</h3>
+                        <p class="p-text">
+                          Other quick charging technologies heat up your phone, leading to slowed charging speeds and poor performance. With Dash Charge, your OnePlus 5 stays cool, and charging doesn’t slow down.
+                        </p>
+                        <ol class="nav-dot ant3">
+                            <li class=""></li>
+                            <li></li>
+                            <li class=""></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="item-imgbox">
+                <div class="img-item img-1 active">
+                    <div class="right">
+                        <ul class="dashLineNav ant1">
+                            <li><span>Screen on</span></li>
+                            <li><span>Play video</span></li>
+                            <li><span>Play game</span></li>
+                        </ul>
+                        <div class="line-box ant3">
+                            <img alt="" data-src="https://opstatics.com/mage/images/859/oneplus5/section-dash-charge/coordinate-bg.png" data-mobile-src="https://opstatics.com/mage/images/859/oneplus5/section-dash-charge/coordinate-bg-m.png" src="https://opstatics.com/mage/images/859/oneplus5/section-dash-charge/coordinate-bg.png">
+                            <div class="line-item line-screen first-active"></div>
+                            <div class="line-item line-video"></div>
+                            <div class="line-item line-game"></div>
+                        </div>
+                        <ol class="ant5">
+                            <li>OnePlus 5</li>
+                            <li>Samsung Galaxy S8</li>
+                            <li>Google Pixel XL</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="img-item img-2"></div>
+                <div class="img-item img-3"></div>
+            </div>
+        </div>
+    </section>
+    <a id="oxygenos" name="oxygenos" track-key="96619fc7bd2a491a9087c1627ac136f7" et-attached="1" without-text-key="96619fc7bd2a491a9087c1627ac136f7"></a>
+    <a id="network" name="network" track-key="fddd417cc1f2334f457b2e2bb7b12e71" et-attached="1" without-text-key="fddd417cc1f2334f457b2e2bb7b12e71"></a>
+    <section data-anchor="network" data-nav-color="nav-bar-black" class="section section-network animated-box animated">
+        <div class="slide-wrap ant1">
+            <div class="slide-item item-effect item-onephone active">
+                <div class="item-content">
+                    <h2 class="ant1 sub-title">Network</h2>
+                    <h2 class="ant2">True Freedom</h2>
+                    <div class="ant3"><h3>Always Connected</h3></div>
+                    <div class="ant4">
+                        <p class="p-text">
+                          The OnePlus 5 is a true world phone, with support for 34 network bands across the globe.
+                        </p>
+                    </div>
+                    <ol class="nav-dot">
+                        <li class="loading"></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="slide-item item-effect item-sim">
+                <div class="item-content">
+                    <h2 class="sub-title">Network</h2>
+                    <h2>True Freedom</h2>
+                    <h3>Dual SIM</h3>
+                    <p class="p-text">
+                    Insert two SIM cards and connect to two networks simultaneously. Whether you're travelling or relies on the need of using two phone numbers, it just makes sense.
+                    </p>
+                    <ol class="nav-dot">
+                        <li class=""></li>
+                        <li class=""></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="slide-item item-effect item-unlocked">
+                <div class="item-content">
+                    <h2 class="sub-title">Network</h2>
+                    <h2>True Freedom </h2>
+                    <h3>Carrier-unlocked</h3>
+                    <p class="p-text">
+                      It's your phone – use it how you want to. The OnePlus 5 comes carrier unlocked, so switching networks is as simple as swapping SIM cards.
+                    </p>
+                    <ol class="nav-dot nav-black">
+                        <li class=""></li>
+                        <li></li>
+                        <li class=""></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+      <div class="item-imgbox ant6">
+        <div class="img-item"></div>
+        <div class="img-item"></div>
+        <div class="img-item"></div>
+      </div>
+    </section>
+    <section class="section section-matters animated-box animated">
+        <h2 class="ant1">Fully-featured Experience</h2>
+        <div class="slide-wrap">
+            <div class="slide-item item-display item-effect">
+                <div class="text-box">
+                    <div class="ant1">
+                        <h2>Fully-featured Experience</h2>
+                    </div>
+                    <div class="ant2">
+                        <h3 class="">Vivid FullHD display</h3>
+                    </div>
+                    <div class="ant3">
+                        <p class="p-text">
+                          Three color calibration options (standard, sRGB, and DCIP3)
+                        </p>
+                    </div>
+                    <div class="ant4">
+                        <ol class="nav-dot nav-black">
+                            <li class=""></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item item-unibody item-effect active">
+                <div class="text-box">
+                    <h2>Fully-featured Experience</h2>
+                    <h3>All-metal unibody</h3>
+                    <p class="p-text">
+                      Carved from a single slab of space-grade aluminum.
+                    </p>
+                    <ol class="nav-dot nav-black">
+                        <li class=""></li>
+                        <li class="loading"></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="slide-item item-scanner item-effect">
+                <div class="text-box">
+                    <h2>Fully-featured Experience</h2>
+                    <h3>Fingerprint scanner</h3>
+                    <p class="p-text">
+                        Unlocks your OnePlus 5 in under 0.2 seconds.
+                    </p>
+                    <ol class="nav-dot nav-black">
+                        <li class=""></li>
+                        <li></li>
+                        <li class=""></li>
+                        <li></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="slide-item item-jack item-effect">
+                <div class="text-box">
+                    <h2>Fully-featured Experience</h2>
+                    <h3>Headphone jack</h3>
+                    <p class="p-text">
+                      With both type-C and standard audio ports, it's all about options.
+                    </p>
+                    <div class="ant4">
+                      <ol class="nav-dot nav-black">
+                          <li class=""></li>
+                          <li></li>
+                          <li></li>
+                          <li class=""></li>
+                      </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="img-box ant5">
+            <div class="img-wrap" style="transform: translate3d(-25%, 0px, 0px);">
+                <div class="img-item item-display"></div>
+                <div class="img-item item-unibody"></div>
+                <div class="img-item item-scanner"></div>
+                <div class="img-item item-jack"></div>
+            </div>
+        </div>
+    </section>
+    <a id="update" name="update" track-key="d0a6f28970d408a70bb1d72f1b8b2b17" et-attached="1" without-text-key="d0a6f28970d408a70bb1d72f1b8b2b17"></a>
+
+    <!-- 视频播放 -->
+    <div class="video-container as-video-container">
+        <div class="close-video as-close-video"></div>
+        <div class="video-area">
+            <div id="videoplayer"></div>
+        </div>
+    </div>
+</div>
+<script src="https://opstatics.com/mage/scripts/859/oneplus5/common.js"></script>
+<script src="https://opstatics.com/mage/scripts/859/oneplus5/index.js"></script>
+<script>
+    $('.nav-bar .actions a').on('click', function (e){
+        var $this = $(this),
+          $indiaBuy = $this.siblings('#india-buy');
+        if($indiaBuy.length){
+            window.oneplus5PageTool && window.oneplus5PageTool.popup( $indiaBuy.html() );
+            e.preventDefault();
+            return false;
+        }
+    });
+</script>
+<script>
+    var $script = document.createElement('script')
+    $script.src = 'https://addevent.com/libs/atc/1.6.1/atc.min.js';
+    $script.async = true;
+    $script.defer = true;
+    document.body.appendChild($script);
+    window.addeventasync = function() {
+        addeventatc.settings({
+            license    : "aWfSRrwLXzIhScZtkmTN23175",
+            // mouse      : false,
+            css        : false,
+            // outlook    : {show:true, text:"Outlook"},
+            // google     : {show:true, text:"Google <em>(online)</em>"},
+            // yahoo      : {show:true, text:"Yahoo <em>(online)</em>"},
+            // outlookcom : {show:true, text:"Outlook.com <em>(online)</em>"},
+            // appleical  : {show:true, text:"Apple Calendar"},
+            // facebook   : {show:true, text:"Facebook Event"},
+            // dropdown   : {order:"outlook,google,appleical"}
+        });
+    };
+</script>
+
+</div>
+{% endif %}
+
+{% if oneplus.model_name == 'Oneplus 3T' %}
+<div class="refurbish">
+<script>
+(function(){
+  if (window.BOOMR && window.BOOMR.version) { return; }
+  var dom,doc,where,iframe = document.createElement("iframe"),win = window;
+  function boomerangSaveLoadTime(e) {
+    win.BOOMR_onload=(e && e.timeStamp) || new Date().getTime();
+  }
+  if (win.addEventListener) {
+    win.addEventListener("load", boomerangSaveLoadTime, false);
+  } else if (win.attachEvent) {
+    win.attachEvent("onload", boomerangSaveLoadTime);
+  }
+  iframe.src = "javascript:void(0)";
+  iframe.title = ""; iframe.role = "presentation";
+  (iframe.frameElement || iframe).style.cssText = "width:0;height:0;border:0;display:none;";
+  where = document.getElementsByTagName("script")[0];
+  where.parentNode.insertBefore(iframe, where);
+  try {
+    doc = iframe.contentWindow.document;
+  } catch(e) {
+    dom = document.domain;
+    iframe.src="javascript:var d=document.open();d.domain='"+dom+"';void(0);";
+    doc = iframe.contentWindow.document;
+  }
+  doc.open()._l = function() {
+    var js = this.createElement("script");
+    if (dom) { this.domain = dom; }
+    js.id = "boomr-if-as";
+    js.src = "https://c.go-mpulse.net/boomerang/" +
+    "88EKS-9UNHF-K5W2G-P5MLX-U6N5V";
+    BOOMR_lstart=new Date().getTime();
+    this.body.appendChild(js);
+  };
+  doc.write('<body onload="document._l();">');
+  doc.close();
+})();
+</script>
+<link rel="stylesheet" href="//content.oneplus.net/skin/frontend/oneplus2015/default/styles/plugins/swiper.min.css?v=20170929065041">
+<link rel="stylesheet" href="//content.oneplus.net/skin/frontend/oneplus2015/default/styles/plugins/atc-style-blue.css">
+<link rel="stylesheet" href="https://opstatics.com/mage/styles/oneplus3t/oneplus3t.css?v=20170929065041">
+<!--op3 start-->
+<div class="main-section oneplus-3 oneplus-3-en">
+  <div class="container-infinite overview-hero">
+    <div class="overview-hero-text">
+      <div class="w1200 clearfix">
+        <div class="main-title active">
+          <span class="en-logo-3t">
+          </span>
+        </div>
+        <div class="sub-title active">A day’s power in half an hour</div>
+        <div class="overview-info active">
+          <p class="sale-price">From ₹29,999</p>
+        </div>
+        <div class="overview-dash-logo br-show-rg active">
+          <i class="i-white-dash-logo"></i>
+        </div>
+        <div class="media-encourages active"></div>
+      </div>
+    </div>
+    <div class="overview-hero-phone" style="transform: translate(0%, 3.78146%) translate3d(52.208px, 0px, 0px);">
+      <div class="overview-top-front" style="transform: translate(0%, -9.6395%) translate3d(0px, 0px, 0px);"></div>
+      <div class="overview-top-back"></div>
+    </div>
+  </div>
+  <div class="container-infinite section-padding-top section-padding-bottom text-center overview-text active">
+    <div class="w1200">
+      <div class="text-area-wider">
+        <div class="main-title active">Never Settle</div>
+        <div class="describe-text">The OnePlus 3T stays true to our Never Settle approach. Impressive specs mean nothing if you don’t have a great experience every time you pick up your phone. The OnePlus 3T delivers the best user experience, thanks to the latest hardware upgrades and carefully tested software enhancements. It was developed with care, craftsmanship and in collaboration with our community.</div>
+      </div>
+    </div>
+  </div>
+<div class="container-infinite text-center bg-black">
+  <div class="section-padding-top"></div>
+  <div class="w1200 black-limited">
+    <div class="text-area-wider">
+      <div class="main-title text-white active">Limited edition Midnight Black</div>
+      <div class="describe-text text-white">Our sleekest device ever just got sleeker. The OnePlus 3T is now available in stunning, limited edition Midnight Black. Find out why our new color is more than just a new color.</div>
+      <div class="link-more">
+        <a href="https://oneplusstore.in/3t-midnight-black" track-key="870fe40d052bc3e917bb3a19e8e93397" et-attached="1" without-text-key="4e728e768a0ac5d5031949767f4f088b"><i class="i-arrow"></i>Learn more</a>
+      </div>
+    </div>
+  </div>
+  <div class="phone-midnight-black"></div>
+</div>
+  <div class="container-infinite play-video-section">
+    <div class="container-infinite text-align phone-video" id="videoBox" data-src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/oneplus3t/video/3t-preview.mp4"><video style="margin-left: -797.5px;" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/oneplus3t/video/3t-preview.mp4" autoplay="" loop="" muted=""></video>
+      <div class="div-center text-center">
+        <a href="javascript:;" class="btn-play" id="videoBtn" track-key="5e37fd276dd865d60b408927806f6c96" et-attached="1" without-text-key="5f261510a2ab0873ecd8cf06bd8419a4"><i class="i-play"></i></a>
+        <p>Watch the video</p>
+      </div>
+    </div>
+    <div class="play-box">
+      <iframe id="videoplayer" frameborder="0" allowfullscreen="1" title="YouTube video player" width="1536" height="864" src="https://www.youtube.com/embed/1fFx4oMQ0jc?enablejsapi=1&amp;origin=https%3A%2F%2Foneplusstore.in&amp;widgetid=1" style="width: 965px; height: 542.813px;"></iframe>
+    </div>
+  </div>
+  <div class="container-infinite section-padding-top dash-charge-section">
+    <div class="dash-charge-text">
+      <div class="w1200">
+        <div class="text-area-side">
+          <h2 class="main-title active">A day’s power<br>in half an hour</h2>
+          <div class="describe-text">Dash Charge is faster, safer, cooler - and simply better - than any other fast charging technology available today. Unlike other technologies, charging speeds remain consistent even while gaming, live-streaming or demanding activities. The new 3400 mAh battery features a 13% increase in capacity over the OnePlus 3, so your phone has enough juice to take you through the day and beyond.</div>
+          <div class="link-more">
+            <a href="https://oneplusstore.in/3t/dashcharge" track-key="c20247a68ec8c027ec1d845aae364646" et-attached="1" without-text-key="80d9e6b3055cb8716aaf70b4ec81ff8d"><i class="i-arrow"></i>Explore Dash Charge</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dash-charge-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+  </div>
+  <div class="container-infinite text-align section-padding-top section-padding-bottom tech-section">
+    <div class="w1200">
+      <div class="text-area-wider">
+        <h2 class="main-title active">Play more, do more, store more</h2>
+        <div class="describe-text">The Qualcomm<sup>®</sup> Snapdragon™ 821 (2.35 GHz) runs even the most demanding apps and games with enhanced performance. Thanks to 6GB of RAM, the OnePlus 3T can juggle countless tasks without slowing down. Internal storage of up to 128GB means running out of space is a thing of the past. We took no short-cuts on our way to a device that performs as well in practice as it benchmarks.</div>
+        <div class="link-more">
+          <a href="https://oneplusstore.in/3t/technology" track-key="151a33edd0df9e6a08d781987f657b34" et-attached="1" without-text-key="ad64cf160a2cac00314904384f39192e"><i class="i-arrow"></i>Explore technology</a>
+        </div>
+      </div>
+      <div class="tech-phone"></div>
+      <ul class="params-summary-list">
+        <li>
+          <!-- <i class="i-dash-grey"></i> -->
+          <em>6GB</em>
+          <label>RAM</label>
+        </li>
+        <li>
+          <em>Snapdragon™ 821</em>
+          <label>Qualcomm<sup>®</sup></label>
+        </li>
+        <li>
+          <em>Up to 128GB</em>
+          <label>Storage</label>
+        </li>
+      </ul>
+      <p class="tech-phone-tip">Asphalt 8: Airborne © 2013 Gameloft. All cars and brands are properties of their respective owners.</p>
+    </div>
+  </div>
+  <div class="container-infinite text-align section-padding-top section-padding-bottom camera-section">
+    <div class="w1200">
+      <div class="text-area-wider">
+        <h2 class="main-title active">Snap to impress</h2>
+        <div class="describe-text">Lightning-fast shutter speed, snappy autofocus, and intelligent software combine to create unmatched smartphone camera experience. Every shot taken with our 16 MP rear camera is sharp and crisp, thanks to cutting-edge noise reduction and improved stabilization technologies. A new 16 MP front camera allows you to capture every moment at every angle.</div>
+        <div class="link-more" style="margin-bottom: 0">
+          <a href="https://oneplusstore.in/3t/camera" track-key="7fa65e7113b17aea4df951c5b16ad763" et-attached="1" without-text-key="55ff7ab15c7589a27c9cc420bfa30d67"><i class="i-arrow"></i>Explore camera</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-infinite hdr-section">
+    <div class="hdr-img" style="transform: matrix(1, 0, 0, 1, 0, 0);"></div>
+    <div class="hdr-phone"></div>
+  </div>
+  <div class="container-infinite text-align section-padding-top section-padding-bottom h2os-section">
+    <div class="w1200">
+      <div class="text-area-wider">
+        <h2 class="main-title active">New and improved <br class="br-show-xs">software</h2>
+        <div class="describe-text">The OnePlus 3T features the most refined version of OxygenOS yet. It makes the most of Android’s core functionalities while adding a slew of customization options. The result is an OS that is just as light and customizable as stock Android, while building on a couple of key areas to improve your experience. We work with our community to ensure every update is shaped by your feedback.</div>
+        <div class="link-more">
+          <a href="https://oneplusstore.in/3t/oxygenos" track-key="03daddc43ca7b9eb0b910e8a6ab5ba6d" et-attached="1" without-text-key="08d8e5b68cb6aca7d4313c9654f29613"><i class="i-arrow"></i>Explore OxygenOS</a>
+        </div>
+      </div>
+      <div class="h2os-img active">
+                    <div class="h2os-img-left"></div>
+                    <div class="h2os-img-mid"></div>
+                    <div class="h2os-img-right"></div>
+                </div>
+    </div>
+  </div>
+
+</div>
+<!--op3 end-->
+<script src="//content.oneplus.net/js/oneplus2015/plugins/greensock/TweenMax.min.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/plugins/scrollMagic/ScrollMagic.min.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/plugins/scrollMagic/plugins/animation.gsap.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/plugins/swiper-3.3.1.jquery.min.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/plugins/atc.min.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/plugins/modernizr-webp.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/oneplus3t/oneplus3t.js?v=20170929065041"></script>
+<script src="//content.oneplus.net/js/oneplus2015/oneplus3t/overview.js?v=20170929065041"></script>
+<script src="https://opstatics.com/mage/scripts/859/oneplus5/common.js?v=20170929065041"></script>
+<script>
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/player_api/";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  var player, playerStatus,
+  playerWidth = $(window).width(),
+  playerHeight = playerWidth/(640/360);
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('videoplayer', {
+      videoId: '1fFx4oMQ0jc',
+      width: playerWidth,
+      height: playerHeight
+    });
+  }
+</script>
+<script>
+      $('.oneplus3-nav .btn-box .btn-buy-3').on('click', function (e){
+        var $this = $(this),
+          $indiaBuy = $this.siblings('#india-buy-3t');
+        if($indiaBuy.length){
+          window.oneplus5PageTool && window.oneplus5PageTool.popup( $indiaBuy.html() );
+          e.preventDefault();
+          return false;
+        }
+      });
+    </script>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<img src="{{ company.comp_logo}}" height="250" width="200">
+<h1>{{company.name}}</h1>
+<h2>{{company.price_range}}</h2>
+{%if company.id == 1%}
+<ul>
+  {% for oneplus in company.oneplus_set.all %}
+  <li>{{oneplus.model_name}} - ₹{{oneplus.price}}
+    {% if oneplus.is_favorite %}
+      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if company.id == 2 %}
+<ul>
+  {% for mis in company.xiaomi_set.all %}
+  <li>{{mis.model_name}} - ₹{{mis.price}}
+    {% if mis.is_favorite %}
+      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+
+{% if company.id == 3 %}
+<ul>
+  {% for sss in company.samsung_set.all %}
+  <li>{{sss.model_name}} - ₹{{sss.price}}
+    {% if sss.is_favorite %}
+      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if company.id == 4 %}
+<ul>
+  {% for aps in company.apple_set.all %}
+  <li>{{aps.model_name}} - ₹{{aps.price}}
+    {% if aps.is_favorite %}
+      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+    {% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+{% endblock %}

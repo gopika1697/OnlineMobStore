@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<title>Superstore</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <style>
+  .navbar{
+  border-radius: 0;
+}
+
+.navbar-brand{
+  font-family: 'Satisfy',cursive;
+}</style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body background="https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg">
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <!--header clicks to homepage-->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#topNavBar">
+          <!--when collapsed  3lines for menu  -->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!--logo-->
+        <a class="navbar-brand" href="{% url 'devices:index' %}">Superstore</a>
+      </div>
+      <!--items-->
+      <div class="collapse navbar-collapse" id="topNavBar">
+        <ul class="nav navbar-nav">
+          <li class="">
+            <a href="{% url 'devices:home' %}">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp; Home
+            </a>
+          </li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Companies <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="{% url 'devices:liop' %}">OnePlus</a></li>
+          <li><a href="{% url 'devices:limi' %}">Xiaomi</a></li>
+          <li><a href="{% url 'devices:liss' %}">Samsung</a></li>
+            <li><a href="{% url 'devices:liap' %}">Apple</a></li>
+        </ul>
+      </li>
+        </ul>
+        <!--search bar-->
+        <form class="navbar-form navbar-left" role="search" method="get" action="#">
+          <div class="form-group">
+            <input type="text" class="form-control" name="q" value="" />
+          </div>
+          <button type="submit" class="btn btn-default">Search</button>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="">
+            <a href="#">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; Change details
+            </a>
+          </li>
+          <li class="">
+            <a href="#">
+              <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>&nbsp; Cart
+            </a>
+          </li>
+          <li class="">
+            <a href="#">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; Logout
+            </a>
+          </li>
+         </ul>
+      </div>
+
+    </div>
+  </nav>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

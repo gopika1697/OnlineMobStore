@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="albums-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ xiaomi.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{ xiaomi.model_name}} - ₹{{xiaomi.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{xiaomi.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{xiaomi.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{xiaomi.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{xiaomi.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{xiaomi.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{xiaomi.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{xiaomi.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{xiaomi.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{xiaomi.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

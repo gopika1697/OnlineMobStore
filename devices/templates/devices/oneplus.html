@@ -1,0 +1,38 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="albums-container container-fluid">
+    <!-- Albums -->
+    <div class="row">
+{% if all_ops %}
+  <h3>Here are the models</h3>
+    {% for op in all_ops %}
+  <!--  <div class="box"><img class='resize_fit_center' src="{{op.album_logo}}">{{op.model_name}}<button type="button">Buynow </button> </div>-->
+  <!--  <a href="/devices/oneplus/{{op.id}}/"><img src="{{op.album_logo}}" style="float: left; width: 30%; height:45%;  margin-right: 1%; margin-bottom: 0.5em;" title="{{op.model_name}}" ></a>
+--><!--<p style="float: left; font-size: 9pt; text-align: center; width: 30%; height:20; margin-right: 1%; margin-bottom: 0.5em;"><a href="/devices/oneplus/{{op.id}}/"><img src="{{op.album_logo}}" style="width: 100%; height:50%"></a>{{op.model_name}} <button type="button">Buynow </button></p>
+-->
+<div class="col-sm-4 col-lg-2">
+               <div class="thumbnail">
+                   <a href="{% url 'devices:opde' op.id %}">
+                       <img src="{{ op.album_logo}}" class="img-responsive">
+                   </a>
+                   <div class="caption">
+                       <h5>{{ op.model_name}} - ₹{{op.price}}</h5>
+
+                       <!-- View Details -->
+               <a href="{% url 'devices:opde' op.id %}" class="btn btn-primary btn-sm" role="button">View specs</a>
+               <!-- View buynow -->
+                          <a href="#" class="btn btn-success btn-sm" role="button">Buy Now</a>
+
+
+             </div>
+                                </div>
+                            </div>
+
+    {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+    {% endfor %}
+  </div>
+    {% else %}
+  <h3>No onepluses</h3>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="albums-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ apple.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{apple.model_name}} - ₹{{apple.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{apple.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{apple.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{apple.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{apple.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{apple.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{apple.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{apple.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{apple.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{apple.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="albums-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ samsung.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{samsung.model_name}} - ₹{{samsung.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{samsung.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{samsung.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{samsung.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{samsung.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{samsung.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{samsung.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{samsung.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{samsung.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{samsung.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

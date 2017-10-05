@@ -1,0 +1,13 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+{% if all_companies %}
+  <h3>Here are the companies</h3>
+
+  {% for company in all_companies %}
+  <a href="{% url 'devices:detail' company.id %}"><img src="{{company.comp_logo}}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
+  {% endfor %}
+{% else %}
+  <h3>No Companies</h3>
+{% endif %}
+<!--<a href="URL"><img src="imageLocation" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" ></a>-->
+{% endblock %}
