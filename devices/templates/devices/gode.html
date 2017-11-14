@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="devices-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ google.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{ google.model_name}} - ₹{{google.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{google.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{google.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{google.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{google.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{google.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{google.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{google.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{google.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{google.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

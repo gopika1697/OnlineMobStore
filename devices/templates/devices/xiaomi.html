@@ -4,7 +4,7 @@
   <!-- Albums -->
   <div class="row">
 {% if all_mis %}
-  <h3>Here are the models</h3>
+  <h3>&nbsp;&nbsp;&nbsp; These devices are 'mi'ne! Dare to buy?</h3>
     {% for mi in all_mis %}
 <div class="col-sm-4 col-lg-2">
                <div class="thumbnail">
@@ -17,7 +17,7 @@
                        <!-- View Details -->
                <a href="{% url 'devices:mide' mi.id %}" class="btn btn-primary btn-sm" role="button">View specs</a>
                <!-- View buynow -->
-                          <a href="#" class="btn btn-success btn-sm" role="button">Buy Now</a>
+                          <a href="{% url 'devices:mibuy' mi.id%}" class="btn btn-success btn-sm" role="button">Buy Now</a>
 
 
              </div>

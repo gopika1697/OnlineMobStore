@@ -4,7 +4,7 @@
   <!-- Albums -->
   <div class="row">
 {% if all_aps %}
-  <h3>Here are the models</h3>
+  <h3>&nbsp;&nbsp;&nbsp;Who doesn't want a bite of the 'apple'?</h3>
     {% for ap in all_aps %}
 <div class="col-sm-4 col-lg-2">
                <div class="thumbnail">
@@ -17,7 +17,7 @@
                        <!-- View Details -->
                <a href="{% url 'devices:apde' ap.id %}" class="btn btn-primary btn-sm" role="button">View specs</a>
                <!-- View buynow -->
-                          <a href="#" class="btn btn-success btn-sm" role="button">Buy Now</a>
+                          <a href="{% url 'devices:apbuy' ap.id%}" class="btn btn-success btn-sm" role="button">Buy Now</a>
 
 
              </div>

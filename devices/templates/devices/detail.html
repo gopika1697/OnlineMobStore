@@ -1,54 +1,112 @@
 {% extends 'devices/base.html'%}
 {% block body%}
-<img src="{{ company.comp_logo}}" height="250" width="200">
+<div class="text-center">
+<img src="{{ company.comp_logo}}" style="width:50% ; height:50%" />
 <h1>{{company.name}}</h1>
-<h2>{{company.price_range}}</h2>
+<h2>Price range: ₹({{company.price_range}})</h2>
 {%if company.id == 1%}
-<ul>
   {% for oneplus in company.oneplus_set.all %}
-  <li>{{oneplus.model_name}} - ₹{{oneplus.price}}
+  {{oneplus.model_name}} - ₹{{oneplus.price}}
     {% if oneplus.is_favorite %}
-      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
     {% endif %}
-  </li>
+  <br />
   {% endfor %}
-</ul>
 {% endif %}
-
 {% if company.id == 2 %}
-<ul>
   {% for mis in company.xiaomi_set.all %}
-  <li>{{mis.model_name}} - ₹{{mis.price}}
+  {{mis.model_name}} - ₹{{mis.price}}
     {% if mis.is_favorite %}
-      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
     {% endif %}
-  </li>
+  <br />
   {% endfor %}
-</ul>
 {% endif %}
 
 
 {% if company.id == 3 %}
-<ul>
   {% for sss in company.samsung_set.all %}
-  <li>{{sss.model_name}} - ₹{{sss.price}}
+  {{sss.model_name}} - ₹{{sss.price}}
     {% if sss.is_favorite %}
-      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
     {% endif %}
-  </li>
+  <br />
   {% endfor %}
-</ul>
 {% endif %}
 
 {% if company.id == 4 %}
-<ul>
   {% for aps in company.apple_set.all %}
-  <li>{{aps.model_name}} - ₹{{aps.price}}
+  {{aps.model_name}} - ₹{{aps.price}}
     {% if aps.is_favorite %}
-      <img src= "http://nicklewiscommunications.com/wp-content/uploads/2014/02/shutterstock_1764811521.jpg" height="16" width="16">
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
     {% endif %}
-  </li>
+  <br />
   {% endfor %}
-</ul>
 {% endif %}
+
+{% if company.id == 5 %}
+  {% for lens in company.lenovo_set.all %}
+  {{lens.model_name}} - ₹{{lens.price}}
+    {% if lens.is_favorite %}
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
+    {% endif %}
+  <br />
+  {% endfor %}
+{% endif %}
+
+{% if company.id == 6 %}
+  {% for mos in company.motorola_set.all %}
+  {{mos.model_name}} - ₹{{mos.price}}
+    {% if mos.is_favorite %}
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
+    {% endif %}
+  <br />
+  {% endfor %}
+{% endif %}
+
+
+{% if company.id == 7 %}
+  {% for ass in company.asus_set.all %}
+  {{ass.model_name}} - ₹{{ass.price}}
+    {% if ass.is_favorite %}
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
+    {% endif %}
+  <br />
+  {% endfor %}
+{% endif %}
+
+
+{% if company.id == 8 %}
+  {% for gos in company.google_set.all %}
+  {{gos.model_name}} - ₹{{gos.price}}
+    {% if gos.is_favorite %}
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
+    {% endif %}
+  <br />
+  {% endfor %}
+{% endif %}
+
+
+{% if company.id == 9 %}
+  {% for sons in company.sony_set.all %}
+  {{sons.model_name}} - ₹{{sons.price}}
+    {% if sons.is_favorite %}
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
+    {% endif %}
+  <br />
+  {% endfor %}
+{% endif %}
+
+{% if company.id == 10 %}
+  {% for lgs in company.lg_set.all %}
+  {{lgs.model_name}} - ₹{{lgs.price}}
+    {% if lgs.is_favorite %}
+      <img src= "/static/devices/images/fav.png" height="14" width="14">
+    {% endif %}
+  <br />
+  {% endfor %}
+{% endif %}
+
+
+</div>
 {% endblock %}

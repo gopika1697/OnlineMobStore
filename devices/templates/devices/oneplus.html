@@ -4,7 +4,7 @@
     <!-- Albums -->
     <div class="row">
 {% if all_ops %}
-  <h3>Here are the models</h3>
+  <h3><b>&nbsp;&nbsp;&nbsp; Want to buy? Better '1+' it to cart!</b></h3>
     {% for op in all_ops %}
   <!--  <div class="box"><img class='resize_fit_center' src="{{op.album_logo}}">{{op.model_name}}<button type="button">Buynow </button> </div>-->
   <!--  <a href="/devices/oneplus/{{op.id}}/"><img src="{{op.album_logo}}" style="float: left; width: 30%; height:45%;  margin-right: 1%; margin-bottom: 0.5em;" title="{{op.model_name}}" ></a>
@@ -21,7 +21,7 @@
                        <!-- View Details -->
                <a href="{% url 'devices:opde' op.id %}" class="btn btn-primary btn-sm" role="button">View specs</a>
                <!-- View buynow -->
-                          <a href="#" class="btn btn-success btn-sm" role="button">Buy Now</a>
+                          <a href="{% url 'devices:opbuy' op.id%}" class="btn btn-success btn-sm" role="button">Buy Now</a>
 
 
              </div>

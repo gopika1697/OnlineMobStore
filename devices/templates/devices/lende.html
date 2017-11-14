@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="devices-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ lenovo.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{ lenovo.model_name}} - ₹{{lenovo.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{lenovo.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{lenovo.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{lenovo.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{lenovo.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{lenovo.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{lenovo.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{lenovo.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{lenovo.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{lenovo.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

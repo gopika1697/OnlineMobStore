@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<title>Superstore home</title>
+{% load static %}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h5,h6,.w3-wide {font-family: "Montserrat",sans-serif ;}
+h4,h3,.w3-wide{font-family: "Satisfy",sans-serif ;}
+
+.popup {
+    position: fixed;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+</style>
+<body class="w3-content" style="max-width:1200px">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:200px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-10">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>Superstore</b></h3>
+  </div>
+  <div class="w3-padding-10 w3-large w3-text-grey" style="font-weight:bold">
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Companies <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <div class="popup" onclick="myFunction()">Oneplus
+      <span class="popuptext" id="myPopup">Login to view</span></div>
+      <br />
+      <div class="popup" onclick="myFunction()">Samsung
+      <span class="popuptext" id="myPopup">Login to view</span></div>
+      <br />
+      <div class="popup" onclick="myFunction()">Apple , Asus
+      <span class="popuptext" id="myPopup">Login to view</span></div>
+      <br />
+      <div class="popup" onclick="myFunction()">LG , Xiaomi
+      <span class="popuptext" id="myPopup">Login to view</span></div>
+      <br />
+      <div class="popup" onclick="myFunction()">Moto , Sony
+      <span class="popuptext" id="myPopup">Login to view</span></div>
+      <br />
+      <div class="popup" onclick="myFunction()">Pixel , Lenovo
+      <span class="popuptext" id="myPopup">Login to view</span></div>
+
+    </div><br />
+    <a href="{% url 'devices:login_user' %}" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>&nbsp; Login</a>
+    <a href="{% url 'devices:register' %}" class="w3-bar-item w3-button"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;SignUp</a>
+
+  </div>
+  <br><br>
+  <a href="{% url 'devices:mymap' %}" class="w3-bar-item w3-button w3-padding">Find Store</a>
+    <a href="{% url 'devices:about_us' %}" class="w3-bar-item w3-button w3-padding">About Us</a>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a>
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Superstore</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <h4><p class="w3-right">Mobiles Home</p></h4>
+  </header>
+
+  <div class="w3-display-container w3-container">
+  <div class="w3-content w3-section" style="width:100%; height:70%;">
+  <img class="mySlides w3-animate-fading" src="{% static "devices/images/aphome1.jpg" %}" style="width:100%; height:70%;">
+  <img class="mySlides w3-animate-fading" src="{% static "devices/images/aphome2.jpg" %}" style="width:100%; height:70%; ">
+  <img class="mySlides w3-animate-fading" src="{% static "devices/images/ophome2.jpg" %}" style="width:100%; height:70%;">
+  <img class="mySlides w3-animate-fading" src="{% static "devices/images/sshome1.jpg" %}" style="width:100%; height:70%;">
+  <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small w3-text-orange">Hot & Trending</h1>
+      <h1 class="w3-hide-large w3-hide-medium w3-text-yellow">Hot & Trending</h1>
+      <h1 class="w3-hide-small w3-text-black">COLLECTION 2017</h1>
+      <p><a href="{% url 'devices:register' %}" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
+   </div>
+  </div>
+  </div>
+
+
+
+
+  <div class="w3-container w3-text-grey" id="jeans">
+    <p>8 items</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row ">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="/static/devices/images/hom1.jpg" style="width:100%">
+        <p><br>Samsung galaxy S8<br><b>₹ 53000</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="/static/devices/images/op3.jpg" style="width:100%">
+        <p><br>Oneplus 3<br><b>₹ 27999</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="/static/devices/images/op5.jpg" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p><br>Oneplus 5<br><b class="w3-text-red">₹ 32900</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="/static/devices/images/hom2.jpg" style="width:100%">
+        <p><br>Xiaomi Mi Mix<br><b>₹ 40000</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="/static/devices/images/hom5.jpg" style="width:100%">
+        <p><br>Apple iPhone X<br><b>₹ 89000</b></p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="/static/devices/images/hom6.jpg" style="width:100% ">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+            <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+          </div>
+        </div>
+        <p><br>Xiaomi Mi Mix 2<br><b class="w3-text-red">₹ 50000</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="/static/devices/images/hom8.jpg" style="width:100%">
+        <p><br>Apple iPhone 8 Plus<br><b>₹ 70000</b></p>
+      </div>
+      <div class="w3-container">
+        <img src="/static/devices/images/lg1.jpg" style="width:100%">
+        <p><br>LG V30<br><b>₹ 53000</b></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+  </div>
+
+  <!-- Footer    AIzaSyBtYRQ8wcclcU5HLg5E2VkTdAvZQLAVXhM    -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="" method="get">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" disabled></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" disabled></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" disabled></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" disabled></p>
+          <button type="submit" class="w3-button w3-block w3-black" >Send</button>
+          <p id="disp">Query sent! Will be replied shortly!</p>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="{% url 'devices:about_us' %}">About us</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="{% url 'devices:mymap' %}">Find store</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-phone"></i> 8762511503</p>
+        <p><i class="fa fa-fw fa-envelope"></i>admin@gmail.com</p>
+        <h5>We accept</h5>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>Follow us on<br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+<script>
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 9000);
+}
+
+// Accordion
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+function myFunction() {
+    var popup = document.getElementById("myPopup");
+    popup.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

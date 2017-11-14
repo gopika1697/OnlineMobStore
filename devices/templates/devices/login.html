@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>Superstore SignUp</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+h3{font-family: "Satisfy",cursive ;}
+</style>
+</head>
+
+<body background="https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg">
+  <div class="container-fluid" id="content">
+    <div class="row">
+       <div class="col-sm-12 col-md-6">
+           <div class="panel panel-default">
+               <div class="panel-body">
+                   <h3>Log In</h3>
+                   {% if error_message %}
+                       <p><strong>{{ error_message }}</strong></p>
+                   {% endif %}
+                   <form class="form-horizontal" role="form" action="{% url 'devices:login_user'%}" method="post" enctype="multipart/form-data">
+                       {% csrf_token %}
+                       <div class="form-group">
+                           <label class="control-label col-sm-2" for="id_username">
+                               Username:
+                           </label>
+                           <div class="col-sm-10">
+                               <input id="id_username" maxlength="30" name="username" placeholder="Your Name" type="text" required>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <label class="control-label col-sm-2" for="id_password">
+                               Password:
+                           </label>
+                           <div class="col-sm-10">
+                               <input id="id_password" maxlength="30" name="password"  placeholder="Password" type="password" required>
+                           </div>
+                       </div>
+                       <div class="form-group">
+                           <div class="col-sm-offset-2 col-sm-10">
+                               <button type="submit" class="btn btn-success">Submit</button>
+                           </div>
+                       </div>
+                   </form>
+               </div>
+               <div class="panel-footer">
+                   Don't have an account? <a href="{% url 'devices:register' %}">Click here</a> to register.
+                   <br />
+                   Or do you want to enjoy looking at our home page instead? {% if flag %}<a href="{% url 'devices:homeres' %}">Click here</a> {% else %}<a href="{% url 'devices:home' %}">Click here</a>{% endif %} to visit homepage!!!
+               </div>
+           </div>
+       </div>
+   </div>
+
+</div>
+</body>
+</html>

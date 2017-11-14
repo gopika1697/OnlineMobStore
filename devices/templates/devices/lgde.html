@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="devices-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ lg.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{ lg.model_name}} - ₹{{lg.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{lg.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{lg.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{lg.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{lg.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{lg.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{lg.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{lg.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{lg.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{lg.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="devices-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ asus.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{asus.model_name}} - ₹{{asus.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{asus.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{asus.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{asus.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{asus.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{asus.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{asus.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{asus.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{asus.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{asus.display_type}}
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endblock %}

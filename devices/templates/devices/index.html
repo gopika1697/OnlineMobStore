@@ -1,13 +1,60 @@
-{% extends 'devices/base.html'%}
+{% extends 'devices/base1.html'%}
 {% block body%}
+<div class="albums-container container-fluid">
+  <div class="row">
 {% if all_companies %}
-  <h3>Here are the companies</h3>
-
+<div class="text-left">
+  <h3><p>
+    &nbsp;&nbsp;&nbsp; If you cant stop thinking about it ....superstore it!
+  </p></h3></div>
   {% for company in all_companies %}
-  <a href="{% url 'devices:detail' company.id %}"><img src="{{company.comp_logo}}" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;"></a>
-  {% endfor %}
-{% else %}
+<div class="col-sm-4 col-lg-2">
+               <div class="thumbnail">
+
+                       <img src="{{ company.comp_logo}}">
+                   <div class="caption">
+                       <h5>{{ company.name}} - ₹{{company.price_range}}</h5>
+
+               <a href="{% url 'devices:detail' company.id %}" class="btn btn-primary btn-sm" role="button"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;Details</a>
+               {% if forloop.counter == 1 %}
+                          <a href="{% url 'devices:liop' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                {% endif %}
+                {% if forloop.counter == 2 %}
+                           <a href="{% url 'devices:limi' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                 {% endif %}
+                 {% if forloop.counter == 3 %}
+                            <a href="{% url 'devices:liss' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                  {% endif %}
+                  {% if forloop.counter == 4 %}
+                             <a href="{% url 'devices:liap' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                   {% endif %}
+                   {% if forloop.counter == 5 %}
+                              <a href="{% url 'devices:lilen' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                    {% endif %}
+                    {% if forloop.counter == 6 %}
+                               <a href="{% url 'devices:limo' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                     {% endif %}
+                     {% if forloop.counter == 7 %}
+                                <a href="{% url 'devices:lias' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                      {% endif %}
+                      {% if forloop.counter == 8 %}
+                                 <a href="{% url 'devices:ligo' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                       {% endif %}
+                       {% if forloop.counter == 9 %}
+                                  <a href="{% url 'devices:lison' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                        {% endif %}
+                        {% if forloop.counter == 10 %}
+                                   <a href="{% url 'devices:lilg' %}" class="btn btn-info btn-sm" role="button"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>&nbsp;Devices</a>
+                         {% endif %}
+             </div>
+                                </div>
+                            </div>
+
+    {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+    {% endfor %}
+  </div>
+    {% else %}
   <h3>No Companies</h3>
 {% endif %}
-<!--<a href="URL"><img src="imageLocation" style="float: left; width: 30%; margin-right: 1%; margin-bottom: 0.5em;" ></a>-->
+</div>
 {% endblock %}

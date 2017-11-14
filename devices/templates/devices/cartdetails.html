@@ -1,0 +1,43 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+{% if cart %}
+<div class="albums-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="/static/devices/images/cart.jpg" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>Cart details of {{request.user.get_username}}</i></h4>
+                       <ul>
+                         <li>
+                           Item:  {{cart.item1}} Qnt: {{cart.qt1}}  Price:    ₹{{cart.price1}}
+                         <br />
+                           <a href="{% url 'devices:delete1' %}" class="btn btn-danger btn-sm" role="button">Remove</a>
+                         </li>
+                         <li>
+                          Item:  {{cart.item2}} Qnt: {{cart.qt2}}  Price:    ₹{{cart.price2}}
+                        <br />
+                          <a href="{% url 'devices:delete2' %}" class="btn btn-danger btn-sm" role="button">Remove</a>
+                         </li>
+                         <li>
+                           Item:  {{cart.item3}} Qnt: {{cart.qt3}}  Price:   ₹{{cart.price3}}
+                        <br />
+                           <a href="{% url 'devices:delete3' %}" class="btn btn-danger btn-sm" role="button">Remove</a>
+                         </li>
+                         <li>
+                           Status:  {{cart.status1}}
+                         </li>
+                         <li>
+                           Total:    ₹{{cart.total}}
+                         </li>
+                       </ul>
+                       <a href="{% url 'devices:addressreg' %}" class="btn btn-primary btn-sm" role="button"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>&nbsp;Review Shipping Address</a>
+                       <a href="{% url 'devices:mailsend' %}" class="btn btn-warning btn-sm" role="button"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp;Proceed to Checkout</a>
+
+                       </div>
+                      </div>
+                  </div></div></div>
+          {% else %}
+              <h3 align="center">NO CART</h3>
+          {% endif %}
+{% endblock %}

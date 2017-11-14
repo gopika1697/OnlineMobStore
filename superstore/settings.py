@@ -25,8 +25,10 @@ SECRET_KEY = '*rco=7#(#vvxe6kj%)l%&ln_wf)6og^#-5yv9wg@&a2@x5(1-x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.4',
+ALLOWED_HOSTS = ['192.168.1.7',
+    '192.168.0.104',
     '127.0.0.1',
+    '122.171.44.180',
 ]
 
 
@@ -101,8 +103,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'rageapocalypse9@gmail.com'
+EMAIL_HOST_PASSWORD = 'dancechampions!'
+EMAIL_PORT = 587
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 

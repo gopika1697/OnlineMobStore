@@ -4,7 +4,7 @@
   <!-- Albums -->
   <div class="row">
 {% if all_sss %}
-  <h3>Here are the models</h3>
+  <h3>&nbsp;&nbsp;&nbsp; 'Sam sung' his way to the cart!!!</h3>
     {% for ss in all_sss %}
 <div class="col-sm-4 col-lg-2">
                <div class="thumbnail">
@@ -17,7 +17,7 @@
                        <!-- View Details -->
                <a href="{% url 'devices:ssde' ss.id %}" class="btn btn-primary btn-sm" role="button">View specs</a>
                <!-- View buynow -->
-                          <a href="#" class="btn btn-success btn-sm" role="button">Buy Now</a>
+                          <a href="{% url 'devices:ssbuy' ss.id%}" class="btn btn-success btn-sm" role="button">Buy Now</a>
 
 
              </div>

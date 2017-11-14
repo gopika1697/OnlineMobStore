@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About Us</title>
+
+  <!-- CSS  -->
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/static/devices/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/static/devices/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+<style>
+#logo-container{
+  font-family: 'Satisfy',cursive;
+}</style>
+</head>
+<body background="/static/devices/images/back1.jpg">
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo">Superstore</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">About Us</a></li>
+        <li>{% if flag %}<a href="{% url 'devices:homeres' %}">Home</a> {% else %}<a href="{% url 'devices:home' %}">Home</a>{% endif %}
+        </li>
+        <li>
+          <a href="{% url 'devices:login_user' %}">Login</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">About Us</a></li>
+        <li>{% if flag %}<a href="{% url 'devices:homeres' %}">Home</a> {% else %}<a href="{% url 'devices:home' %}">Home</a>{% endif %}
+        </li>
+        <li>
+          <a href="{% url 'devices:login_user' %}">Login</a>
+        </li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <div class="row center">
+          <h4 class="header center"><span class="grey-text text-darken-2">A modern online store designed to woo Consumer needs</span></h4>
+        </div>
+        <div class="row center">
+          <a href="{% url 'devices:login_user' %}" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Start Shopping</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="/static/devices/images/shop1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">User Experience Focused</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design,Django,Bootstrap we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m6">
+          <div class="icon-block">
+            <h2 class="center brown-text"><i class="material-icons">devices_other</i></h2>
+            <h5 class="center">Use and Queries</h5>
+
+            <p class="light">We have provided detailed Specification to all listed devices to help new users make their choice. We are also always open to feedback and can answer any questions a user may have about the store.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h3 class="header col s12 light"><span class="indigo-text text-darken-1">Official marketing partners of all things OnePlus</span></h3>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/static/devices/images/shop2.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>About Us</h4>
+          <p class="left-align light"><ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">assignment_ind</i>Gopika G Kini</div>
+      <div class="collapsible-body"><span><div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="/static/devices/images/gops.jpg" alt="nope" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="orange-text text-darken-1">
+                <ul>
+                  <li>USN : 4NICS127</li>
+		<li>Contributions : Backend development & homepage detailing</li>
+		<li>Contact : Toda sharam kar ladki k no mang rahi h</li>
+              </span>
+            </div>
+          </div>
+        </div></span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">assignment_ind</i>Nirusha Nayak</div>
+      <div class="collapsible-body"><span>
+	<div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="/static/devices/images/niru.jpg" alt="nope" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="green-text text-darken-1">
+                <ul>
+                  <li>USN : 4NICS126</li>
+		<li>Contributions : Backend development & item specification detailing</li>
+		<li>Contact : Toda sharam kar ladki k no mang rahi h</li>
+              </span>
+            </div>
+          </div>
+        </div>
+	</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">assignment_ind</i>Aditya K Pramod</div>
+      <div class="collapsible-body"><span>
+	<div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="/static/devices/images/me.jpg" alt="nope" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="purple-text text-darken-2">
+                <ul>
+                  <li>USN : 4NICS005</li>
+		<li>Contributions : Backend & Frontend implementation and detailing using django </li>
+		<li>Contact : Nahi dunga cuz yolo</li>
+              </span>
+            </div>
+          </div>
+        </div>
+	</span></div>
+    </li>
+  </ul>
+         </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h3 class="header col s12 light"><span class="red-text text-darken-2">If you cant stop thinking about it Superstore it!</span> </h3>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="/static/devices/images/shop3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project. Any amount that would help support and continue development on this project is greatly appreciated.</p>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/static/devices/js/materialize.js"></script>
+  <script src="/static/devices/js/init.js"></script>
+
+  </body>
+</html>
