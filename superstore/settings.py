@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = ['192.168.1.7',
     '192.168.0.104',
     '127.0.0.1',
-    '122.171.44.180',
+    '122.179.22.255',
+    'nomad1212.dlinkddns.com',
 ]
 
 
@@ -48,7 +49,10 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.gzip.GZipMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',

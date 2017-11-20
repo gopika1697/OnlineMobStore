@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Company,Oneplus,Xiaomi,Samsung,Apple,Cart,Address,Sony,Lenovo,Google,Asus,LG,Motorola
+from .models import Company,Oneplus,Xiaomi,Samsung,Apple,Cart,Address,Sony,Lenovo,Google,Asus,LG,Motorola,Queryget
 admin.site.register(Company)
 admin.site.register(Oneplus)
 admin.site.register(Xiaomi)
@@ -13,4 +13,5 @@ admin.site.register(Google)
 admin.site.register(Asus)
 admin.site.register(LG)
 admin.site.register(Motorola)
+admin.site.register(Queryget)
 # Register your models here.

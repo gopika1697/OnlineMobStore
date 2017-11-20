@@ -10,6 +10,15 @@ class Company(models.Model):
     def __str__(self):
         return self.name+' - '+self.price_range
 
+class Queryget(models.Model):
+    name=models.CharField(max_length=50)
+    email=models.CharField(max_length=100)
+    subj=models.CharField(max_length=100)
+    message=models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name+' - query'
+
 class Oneplus(models.Model):
     company=models.ForeignKey(Company,on_delete=models.CASCADE)
     model_name = models.CharField(max_length=50)

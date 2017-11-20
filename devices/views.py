@@ -3,11 +3,13 @@ from django import forms
 from django.contrib.auth import authenticate,login,logout
 from django.shortcuts import render,get_object_or_404,redirect
 from .models import Company,Oneplus,Xiaomi,Samsung,Apple,Address
-from .models import Cart,Lenovo,Asus,Motorola,Google,Sony,LG
+from .models import Cart,Lenovo,Asus,Motorola,Google,Sony,LG,Queryget
 from .forms import UserForm,AddressForm,UpdateForm
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import EmailMessage
+from  django.views.decorators.gzip import gzip_page
+from django.views.decorators.cache import cache_control
 import re
 
 flag=0
@@ -78,7 +80,13 @@ def homeres(request):
 def about_us(request):
     return render(request,'devices/aboutus.html',{'flag':flag})
 
+#@cache_control(no_cache=True,must_revalidate=True)
+@gzip_page
 def home(request):
+    global flag
+    print('flag=',flag)
+    if flag :
+        return redirect('devices:homeres')
     queryn=request.GET.get('Name',None)
     querye=request.GET.get('Email',None)
     querys=request.GET.get('Subject',None)
@@ -86,9 +94,14 @@ def home(request):
     if querym==None or queryn==None or querye==None or querys==None :
         return render(request,'devices/home.html')
     else :
-        global flag
         flag=1
         print(querym)
+        query1=Queryget()
+        query1.name=queryn
+        query1.email=querye
+        query1.message=querym
+        query1.subj=querys
+        query1.save()
         emails=EmailMessage(
         'Superstore query',
         'Query sent by : '+queryn+'\nSender\'s mail-id : '+querye+'\nSubject : '+querys+'\nMessage : '+querym,
@@ -96,6 +109,7 @@ def home(request):
         )
         print('query sent')
         emails.send()
+
         return redirect('devices:homeres')
 
 def liop(request):
