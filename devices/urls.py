@@ -10,6 +10,7 @@ urlpatterns = [
    url(r'^home/$',views.home,name='home'),
    #/devices/aboutus/
   url(r'^about_us/$',views.about_us,name='about_us'),
+
    #/devices/homeres/
    url(r'^homeres/$',views.homeres,name='homeres'),
    #/devices/map/
@@ -42,7 +43,10 @@ urlpatterns = [
     url(r'^oneplus/(?P<op_id>[0-9]+)/$',views.opde,name='opde'),
     #/devices/oneplus/1/buy/
      url(r'^oneplus/(?P<op_id>[0-9]+)/buy/$',views.opbuy,name='opbuy'),
-
+     #devices/outofstock/compname/modelname/
+     url(r'^outofstock/(?P<comp_name>[A-Za-z0-9 ]+)/(?P<model_name>[A-Za-z0-9 ]+)/$',views.outofstock,name='outofstock'),
+     #devices/placeorder/comp_name/model_name/
+     url(r'^placeorder/(?P<comp_name>[A-Za-z0-9 ]+)/(?P<model_name>[A-Za-z0-9 ]+)/$',views.placeorder,name='placeorder'),
    #/devices/xiaomi/
    url(r'^xiaomi/$',views.limi,name='limi'),
    #/devices/xiaomi/1/

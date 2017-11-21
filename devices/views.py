@@ -3,13 +3,14 @@ from django import forms
 from django.contrib.auth import authenticate,login,logout
 from django.shortcuts import render,get_object_or_404,redirect
 from .models import Company,Oneplus,Xiaomi,Samsung,Apple,Address
-from .models import Cart,Lenovo,Asus,Motorola,Google,Sony,LG,Queryget
+from .models import Cart,Lenovo,Asus,Motorola,Google,Sony,LG,Queryget,Orders
 from .forms import UserForm,AddressForm,UpdateForm
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import EmailMessage
 from  django.views.decorators.gzip import gzip_page
-from django.views.decorators.cache import cache_control
+from django.db import IntegrityError
+#from django.views.decorators.cache import cache_control
 import re
 
 flag=0
@@ -80,7 +81,7 @@ def homeres(request):
 def about_us(request):
     return render(request,'devices/aboutus.html',{'flag':flag})
 
-#@cache_control(no_cache=True,must_revalidate=True)
+
 @gzip_page
 def home(request):
     global flag
@@ -112,6 +113,32 @@ def home(request):
 
         return redirect('devices:homeres')
 
+def outofstock(request,comp_name,model_name):
+    if not request.user.is_authenticated():
+        print('no')
+        return redirect('devices:login_user')
+    else:
+        if request.user.is_superuser and request.user.is_staff:
+                return render(request,'devices/outofstock1.html',{'comp_name':comp_name,'model_name':model_name})
+
+        return render(request,'devices/outofstock.html',{'comp_name':comp_name,'model_name':model_name})
+
+def placeorder(request,comp_name,model_name):
+    print('order placed')
+    if not request.user.is_authenticated():
+        print('no')
+        return redirect('devices:login_user')
+    else:
+        try:
+            order=Orders()
+            order.model_name=model_name
+            company=Company.objects.get(name=comp_name)
+            order.company_id=company.id
+            order.save()
+        except IntegrityError as e:
+            return render(request,'devices/orderexists.html')
+        return redirect('devices:index')
+
 def liop(request):
     if not request.user.is_authenticated():
         print('no')
@@ -129,6 +156,7 @@ def opde(request,op_id):
         oneplus=get_object_or_404(Oneplus,pk=op_id)
         return render(request,'devices/opde.html',{'oneplus':oneplus})
 def opbuy(request,op_id):
+    addindex=1
     cart=Cart.objects.get(user_name=request.user.username)
     oneplus=get_object_or_404(Oneplus,pk=op_id)
     if not cart.item1:
@@ -139,15 +167,21 @@ def opbuy(request,op_id):
         cart.item2=oneplus.model_name
         cart.price2=oneplus.price
         cart.qt2=1
+        addindex=2
     elif not cart.item3:
         cart.item3=oneplus.model_name
         cart.price3=oneplus.price
         cart.qt3=1
+        addindex=3
     else :
         cart.item1=oneplus.model_name
         cart.price1=oneplus.price
         cart.qt1=1
+    if oneplus.stock<=0:
+        return redirect('devices:outofstock','Oneplus',oneplus.model_name)
     cart.save()
+    oneplus.stock-=1
+    oneplus.save()
     return redirect('devices:cartdetails')
 
 
@@ -184,7 +218,11 @@ def mibuy(request,mi_id):
         cart.item1=xiaomi.model_name
         cart.price1=xiaomi.price
         cart.qt1=1
+    if xiaomi.stock<=0:
+        return redirect('devices:outofstock','Xiaomi',xiaomi.model_name)
     cart.save()
+    xiaomi.stock-=1
+    xiaomi.save()
     return redirect('devices:cartdetails')
 
 
@@ -221,7 +259,11 @@ def ssbuy(request,ss_id):
         cart.item1=samsung.model_name
         cart.price1=samsung.price
         cart.qt1=1
+    if samsung.stock<=0:
+        return redirect('devices:outofstock','Samsung',samsung.model_name)
     cart.save()
+    samsung.stock-=1
+    samsung.save()
     return redirect('devices:cartdetails')
 
 
@@ -258,7 +300,11 @@ def apbuy(request,ap_id):
         cart.item1=apple.model_name
         cart.price1=apple.price
         cart.qt1=1
+    if apple.stock<=0:
+        return redirect('devices:outofstock','Apple',apple.model_name)
     cart.save()
+    apple.stock-=1
+    apple.save()
     return redirect('devices:cartdetails')
 
 
@@ -295,7 +341,11 @@ def lenbuy(request,len_id):
         cart.item1=lenovo.model_name
         cart.price1=lenovo.price
         cart.qt1=1
+    if lenovo.stock<=0:
+        return redirect('devices:outofstock','Lenovo',lenovo.model_name)
     cart.save()
+    lenovo.stock-=1
+    lenovo.save()
     return redirect('devices:cartdetails')
 
 def limo(request):
@@ -331,7 +381,11 @@ def mobuy(request,mo_id):
         cart.item1=motorola.model_name
         cart.price1=motorola.price
         cart.qt1=1
+    if motorola.stock<=0:
+        return redirect('devices:outofstock','Motorola',motorola.model_name)
     cart.save()
+    motorola.stock-=1
+    motorola.save()
     return redirect('devices:cartdetails')
 
 def lias(request):
@@ -367,7 +421,11 @@ def asbuy(request,as_id):
         cart.item1=asus.model_name
         cart.price1=asus.price
         cart.qt1=1
+    if asus.stock<=0:
+        return redirect('devices:outofstock','Asus',asus.model_name)
     cart.save()
+    asus.stock-=1
+    asus.save()
     return redirect('devices:cartdetails')
 
 def ligo(request):
@@ -403,7 +461,11 @@ def gobuy(request,go_id):
         cart.item1=google.model_name
         cart.price1=google.price
         cart.qt1=1
+    if google.stock<=0:
+        return redirect('devices:outofstock','Google',google.model_name)
     cart.save()
+    google.stock-=1
+    google.save()
     return redirect('devices:cartdetails')
 
 
@@ -440,7 +502,11 @@ def sonbuy(request,son_id):
         cart.item1=sony.model_name
         cart.price1=sony.price
         cart.qt1=1
+    if sony.stock<=0:
+        return redirect('devices:outofstock','Sony',sony.model_name)
     cart.save()
+    sony.stock-=1
+    sony.save()
     return redirect('devices:cartdetails')
 
 def lilg(request):
@@ -476,7 +542,11 @@ def lgbuy(request,lg_id):
         cart.item1=lg.model_name
         cart.price1=lg.price
         cart.qt1=1
+    if lg.stock<=0:
+        return redirect('devices:outofstock','LG',lg.model_name)
     cart.save()
+    lg.stock-=1
+    lg.save()
     return redirect('devices:cartdetails')
 
 

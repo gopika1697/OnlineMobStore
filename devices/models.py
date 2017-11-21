@@ -19,6 +19,13 @@ class Queryget(models.Model):
     def __str__(self):
         return self.name+' - query'
 
+class Orders(models.Model):
+    company=models.ForeignKey(Company,on_delete=models.CASCADE)
+    model_name=models.CharField(max_length=50,unique=True)
+    orderno=models.IntegerField(default=100)
+    def __str__(self):
+        return self.model_name
+
 class Oneplus(models.Model):
     company=models.ForeignKey(Company,on_delete=models.CASCADE)
     model_name = models.CharField(max_length=50)
@@ -35,6 +42,7 @@ class Oneplus(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP,f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name+' - '+self.model_no
@@ -55,7 +63,7 @@ class Xiaomi(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP,f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
     def __str__(self):
         return self.model_name
 
@@ -75,7 +83,7 @@ class Samsung(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP,f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -95,7 +103,7 @@ class Apple(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP,f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -148,7 +156,7 @@ class Lenovo(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP, f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -167,7 +175,7 @@ class Motorola(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP, f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -186,7 +194,7 @@ class Asus(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP, f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -205,7 +213,7 @@ class Sony(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP, f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -224,7 +232,7 @@ class Google(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP, f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name
@@ -244,7 +252,7 @@ class LG(models.Model):
     camera_primary=models.CharField(max_length=30,default="16MP,f/2.0")
     album_logo=models.CharField(max_length=1000)
     is_favorite = models.BooleanField(default=False)
-
+    stock=models.IntegerField(default=100)
 
     def __str__(self):
         return self.model_name

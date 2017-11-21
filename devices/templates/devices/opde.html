@@ -95,7 +95,7 @@
     </div>
     <div class="container-infinite bg-gray">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 bg-white">
+        <div class="col-xs-12 col-sm-6 col-md-6 bg-white">
           <div class="multi-lense">
             <h2 class="text-black">Multi Lens Optics</h2>
             <div class="margin-small with-decoration-left"></div>
@@ -105,7 +105,7 @@
             <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense@2x.jpg 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg" style="display: block;">
           </div>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-4 bg-gray">
+        <!--<div class="col-xs-12 col-sm-6 col-md-4 bg-gray">
           <div class="front-camera">
             <h2 class="text-black">5 MP Front Facing Camera</h2>
             <div class="margin-small with-decoration-left"></div>
@@ -115,14 +115,14 @@
             <div class="margin-small"></div>
             <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png" style="display: block;">
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-4 bg-black">
+        </div>-->
+        <div class="col-xs-12 col-sm-12 col-md-6 bg-black">
           <div class="sony-sensor">
             <h2>Sony Exmor<em>™</em> Sensor</h2>
             <div class="margin-small with-decoration-white-left"></div>
             <div class="margin-small"></div>
             <p class="description">Boasting a 13 megapixel Sony Exmor IMX214 camera with f/2.0 aperture, the OnePlus One camera takes amazing pictures even in low light conditions. Shoot anytime, anywhere for bright, sharp photos.</p>
-            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor@2x.jpg 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg" style="display: block;">
+            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/sony-sensor.jpg 1x, /static/devices/images/op1sensor.jpg 2x" src="/static/devices/images/op1sensor.jpg" style="display: block;">
           </div>
         </div>
       </div>
@@ -203,6 +203,9 @@ var $boxes = $('.feature-box');
                          <li>
                            Display Type:  {{oneplus.display_type}}
                          </li>
+                         <li>
+                           In Stock:    {{oneplus.stock}} numbers.
+                         </li>
                        </ul>
                        </div>
                       </div>
@@ -228,10 +231,12 @@ var $boxes = $('.feature-box');
               <h2 class="text-title">Flagship Killer</h2>
               <p class="text-describe">With the OnePlus 2, we have something bold to say. We believe that great products come from great ideas, not multi-million dollar marketing campaigns. We believe “that’s just the way things are” is almost always the wrong answer. Most of all, we believe that great things should be shared. </p>
               <h3>This is the OnePlus 2.</h3>
+              <h4 class="text-title"><strong>Hurry up! Only {{oneplus.stock}} left.</strong></h4>
             </div>
             <div class="installment installment1">
               <div>
                 <h4><strong>Sandstone Black</strong> with 64GB storage</h4>
+
                 <span class="price">₹ 22,999</span>
               </div>
             </div>
@@ -475,7 +480,7 @@ var $boxes = $('.feature-box');
                         S57.535,103.33,39.005,103.33c-17.261,0-31.522-13.082-33.396-29.851L0,81.345c5.013,16.797,20.601,29.078,39.005,29.078
                         c22.441,0,40.698-18.258,40.698-40.698C79.704,49.466,64.823,32.615,45.418,29.53"></path>
                     </svg></span></h2>
-
+                    <h4 class=sub-title-2>Hurry up! Only {{oneplus.stock}} left!</h4>
                     <p class="price">₹ 27,999</p>
                 </div>
                 <div class="overview-hero-img">
@@ -726,6 +731,8 @@ var $boxes = $('.feature-box');
                             <li class=""></li>
                             <li class="loading"></li>
                         </ol>
+                        <h2 class="sub-title">Hurry Up! Only {{oneplus.stock}} left!</h2>
+                        <h2 class="subtitle">At   ₹{{oneplus.price}}</h2>
                     </div>
                 </div>
                 <div class="phone-box ant2-o">
@@ -1426,7 +1433,7 @@ var $boxes = $('.feature-box');
         </div>
         <div class="sub-title active">A day’s power in half an hour</div>
         <div class="overview-info active">
-          <p class="sale-price">From ₹28,500</p>
+          <p class="sale-price">From ₹28,500<br />Hurry up! Only {{oneplus.stock}} left!</p>
         </div>
         <div class="overview-dash-logo br-show-rg active">
           <i class="i-white-dash-logo"></i>

@@ -1,0 +1,21 @@
+{% extends 'devices/base.html'%}
+{% block body%}
+<div class="text-center">
+<p>
+  <h3><b>
+    <br /><br /><br /><br />
+Device is OUT of Stock  or is no longer available ....contact db admin or query to refill this product.
+<br /><u>Product name:</u> {{model_name}}
+</h3></b>
+<br />
+Click here to continue shopping.
+<br />
+  <a href="{% url 'devices:index' %}" class="btn btn-primary btn-sm" role="button">Continue shopping</a>
+<br />
+Click here to place order directly.
+<br />
+  <a href="/devices/placeorder/{{comp_name}}/{{model_name}}/" class="btn btn-success btn-sm" role="button">Place order</a>
+<br />
+</p>
+</div>
+{% endblock %}
