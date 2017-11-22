@@ -10,6 +10,11 @@ urlpatterns = [
    url(r'^home/$',views.home,name='home'),
    #/devices/aboutus/
   url(r'^about_us/$',views.about_us,name='about_us'),
+  #/devices/retpolicy/
+ url(r'^retpolicy/$',views.returnpolicy,name='returnpolicy'),
+
+ #/devices/support/
+url(r'^support/$',views.support,name='support'),
 
    #/devices/homeres/
    url(r'^homeres/$',views.homeres,name='homeres'),

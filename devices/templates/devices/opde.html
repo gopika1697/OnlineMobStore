@@ -105,17 +105,6 @@
             <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense@2x.jpg 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/multi-lense.jpg" style="display: block;">
           </div>
         </div>
-        <!--<div class="col-xs-12 col-sm-6 col-md-4 bg-gray">
-          <div class="front-camera">
-            <h2 class="text-black">5 MP Front Facing Camera</h2>
-            <div class="margin-small with-decoration-left"></div>
-            <div class="margin-small"></div>
-            <p class="description">With a 5 megapixel camera adorning the front of the OnePlus One, selfies will be more captivating than ever. The extra-wide 80º viewing angle captures more area than other phones so your pictures will include more background without distortion.</p>
-            <div class="margin-huge"></div>
-            <div class="margin-small"></div>
-            <img class="lazy feature-image" data-original="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png" srcset="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png 1x, //content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera@2x.png 2x" src="//content.oneplus.net/skin/frontend/oneplus2015/default/images/feature/one/front-camera.png" style="display: block;">
-          </div>
-        </div>-->
         <div class="col-xs-12 col-sm-12 col-md-6 bg-black">
           <div class="sony-sensor">
             <h2>Sony Exmor<em>™</em> Sensor</h2>
@@ -168,6 +157,50 @@ var $boxes = $('.feature-box');
 </div>
 {% endif %}
 {% if oneplus.model_name == 'Oneplus X' %}
+<div class="devices-container container-fluid">
+  <div class="row">
+    <div class="col-lg-4 col-lg-6">
+                   <div class="thumbnail">
+                     <img src="{{ oneplus.album_logo}}" style="width:100%" />
+                     <div class="caption">
+                        <h4><i>{{oneplus.model_name}} - ₹{{oneplus.price}}</i></h4>
+                       <ul>
+                         <li>
+                           RAM:  {{oneplus.ram}}
+                         </li>
+                         <li>
+                            Internal memory:  {{oneplus.internal_mem}}
+                         </li>
+                         <li>
+                           Battery:   {{oneplus.battery}}
+                         </li>
+                         <li>
+                           Camera Primary:  {{oneplus.camera_primary}}
+                         </li>
+                         <li>
+                           Processor:   {{oneplus.processor}}
+                         </li>
+                         <li>
+                          GPU:  {{oneplus.gpu}}
+                         </li>
+                         <li>
+                           StockROM:  {{oneplus.stockrom}}
+                         </li>
+                         <li>
+                           Dispaly Size:  {{oneplus.display_size}}
+                         </li>
+                         <li>
+                           Display Type:  {{oneplus.display_type}}
+                         </li>
+                         <li>
+                           In Stock:    {{oneplus.stock}} numbers.
+                         </li>
+                       </ul>
+                       </div>
+                      </div>
+                  </div></div></div>
+{% endif %}
+{% if oneplus.model_name == 'OnePlus 5T' %}
 <div class="devices-container container-fluid">
   <div class="row">
     <div class="col-lg-4 col-lg-6">

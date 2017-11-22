@@ -80,7 +80,10 @@ def homeres(request):
     return render(request,'devices/homeres.html')
 def about_us(request):
     return render(request,'devices/aboutus.html',{'flag':flag})
-
+def returnpolicy(request):
+    return render(request,'devices/return.html',{'flag':flag})
+def support(request):
+    return render(request,'devices/sandh.html')    
 
 @gzip_page
 def home(request):
